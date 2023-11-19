@@ -1,27 +1,30 @@
 {
-    "name": "digicademy/da-heritage",
+    "name": "digicademy/chf_object",
     "type": "typo3-cms-extension",
-    "description": "Create and manage location- and time-based research data in TYPO3",
+    "description": "Create and manage object-based research data in TYPO3",
     "authors": [
         {
             "name": "Jonatan Jalle Steller",
             "email": "jonatan.steller@adwmainz.de",
             "role": "Developer",
             "homepage": "https://www.adwmainz.de"
+        },
+        {
+            "name": "CHF Object contributors"
         }
     ],
     "license": "GPL-2.0-or-later",
-    "homepage": "https://gitlab.rlp.net/adwmainz/digicademy/t3xdev/da-heritage",
+    "homepage": "https://extensions.typo3.org/extension/chf_object",
     "support": {
-        "issues": "https://gitlab.rlp.net/adwmainz/digicademy/t3xdev/da-heritage/-/issues",
-        "source": "https://gitlab.rlp.net/adwmainz/digicademy/t3xdev/da-heritage",
-        "docs": "https://adwmainz.pages.gitlab.rlp.net/digicademy/t3xdev/da-heritage"
+        "issues": "https://github.com/digicademy-chf/chf_object/issues",
+        "source": "https://github.com/digicademy-chf/chf_object",
+        "docs": "https://digicademy-chf.github.io/chf_object"
     },
     "keywords": [
         "TYPO3",
         "Cultural heritage",
-        "Location",
-        "Time",
+        "Object",
+        "Building",
         "Data",
         "Research",
         "Academia",
@@ -32,12 +35,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Digicademy\\DAHeritage\\": "Classes/"
+            "Digicademy\\CHFObject\\": "Classes/"
         }
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "da_heritage"
+            "extension-key": "chf_object"
         }
     }
 }

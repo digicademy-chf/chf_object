@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: DA Heritage
+title: CHF Object
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
@@ -10,19 +10,30 @@ authors:
     email: jonatan.steller@adwmainz.de
     affiliation: Academy of Sciences and Literature Mainz
     orcid: 'https://orcid.org/0000-0002-5101-5275'
+  - name: "CHF Object contributors"
 repository-code: >-
-  https://gitlab.rlp.net/adwmainz/digicademy/t3xdev/da-heritage
+  https://github.com/digicademy-chf/chf_object
 abstract: >-
-  Longer description.
+  The extension provides a data model for object-centric
+  data, as part of the Cultural Heritage Framework (CHF).
+  This may be used to extend image archives or to compile
+  object-specific data in its own right. A central
+  resource of this data model may contain, among others,
+  locations (e.g., buildings), object groups (e.g., parts
+  of a building), and objects themselves. Each of these
+  may be annotated individually. Locations may further be
+  equipped with floor plans while objects may specify
+  representations as well as schematics to illustrate, for
+  example, which parts of an object have been restored.
 keywords:
   - TYPO3
   - Cultural heritage
-  - Location
-  - Time
+  - Object
+  - Building
   - Data
   - Research
   - Academia
   - Academic
 license: GPL 3
-version: 0.0.1
-date-released: '2023-04-12'
+version: 0.6.0
+date-released: '2023-11-27'
