@@ -7,11 +7,11 @@ Data model
 ==========
 
 All records of an object repository are held together by a single
-``ObjectResource`` which holds the main classes ``Object``, ``ObjectGroup``,
-``Location``, ``Period``, ``Agent``, and ``Tag``. The class ``Object`` has a
-set of fields that contain information of physical objects and includes the
-option to add, for example, image representations and schematics. A common
-serialisation for objects is the LIDO format.
+``ObjectResource`` which holds the main classes ``SingleObject``,
+``ObjectGroup``, ``Location``, ``Period``, ``Agent``, and ``Tag``. The class
+``SingleObject`` has a set of fields that contain information of physical
+objects and includes the option to add, for example, image representations and
+schematics. A common serialisation for objects is the LIDO format.
 
 ``Feature``s and ``MapResource``s may be used across the model to add geodata
 and image maps. ``Period``s are used to add object biographies. ``Agents`` can
