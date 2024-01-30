@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="EXT:chf_object/Resources/Private/Language/locallang.xlf" date="2023-09-25T10:48:43Z" product-name="chf_object">
+        <header/>
+        <body>
+            <!-- Object: ObjectResource -->
+            <trans-unit id="object.objectResource.type.objectResource" resname="object.objectResource.type.objectResource" approved="yes">
+                <source>Object resource</source>
+                <target>Objektressource</target>
+            </trans-unit>
+            <trans-unit id="object.objectResource.allObjectGroups" resname="object.objectResource.allObjectGroups" approved="yes">
+                <source>All object groups</source>
+                <target>Alle Objektgruppen</target>
+            </trans-unit>
+            <trans-unit id="object.objectResource.allObjectGroups.description" resname="object.objectResource.allObjectGroups.description" approved="yes">
+                <source>List of all object groups compiled in this resource</source>
+                <target>Liste aller Objektgruppen, die in dieser Ressource verzeichnet sind</target>
+            </trans-unit>
+            <trans-unit id="object.objectResource.allSingleObjects" resname="object.objectResource.allSingleObjects" approved="yes">
+                <source>All single objects</source>
+                <target>Alle Einzelobjekte</target>
+            </trans-unit>
+            <trans-unit id="object.objectResource.allSingleObjects.description" resname="object.objectResource.allSingleObjects.description" approved="yes">
+                <source>List of all single objects compiled in this resource</source>
+                <target>Liste aller Einzelobjekte, die in dieser Ressource verzeichnet sind</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
