@@ -22,6 +22,6 @@ return [
     Digicademy\CHFBase\Domain\Model\AbstractResource::class => [
         'subclasses' => [
             'objectResource' => Digicademy\CHFObject\Domain\Model\ObjectResource::class,
-        ]
+        ],
     ],
 ];
