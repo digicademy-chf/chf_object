@@ -24,6 +24,106 @@
                 <source>List of all single objects compiled in this resource</source>
                 <target>Liste aller Einzelobjekte, die in dieser Ressource verzeichnet sind</target>
             </trans-unit>
+            <!-- Object: AbstractObject -->
+            <trans-unit id="object.abstractObject.name" resname="object.abstractObject.name" approved="yes">
+                <source>Name</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.name.description" resname="object.abstractObject.name.description" approved="yes">
+                <source>Title of this object</source>
+                <target>Titel dieses Objekts</target>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.alternativeName" resname="object.abstractObject.alternativeName" approved="yes">
+                <source>Alternative Name</source>
+                <target>Alternativer Name</target>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.alternativeName.description" resname="object.abstractObject.alternativeName.description" approved="yes">
+                <source>Common alternative name that may, for example, be useful as a search term</source>
+                <target>Gebräuchlicher alternativer Name, der z.B. als Suchbegriff nützlich sein kann</target>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.isHistorical" resname="object.abstractObject.isHistorical" approved="yes">
+                <source>Historical object</source>
+                <target>Historisches Objekt</target>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.isHistorical.description" resname="object.abstractObject.isHistorical.description" approved="yes">
+                <source>Marks this object as historical</source>
+                <target>Markiert dieses Objekt als historisch</target>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.event" resname="object.abstractObject.event" approved="yes">
+                <source>Event</source>
+                <target>Ereignis</target>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.event.description" resname="object.abstractObject.event.description" approved="yes">
+                <source>Room to list object-related events</source>
+                <target>Raum für objektbezogene Ereignisse</target>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.object" resname="object.abstractObject.object" approved="yes">
+                <source>Object</source>
+                <target>Objekt</target>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.object.description" resname="object.abstractObject.object.description" approved="yes">
+                <source>Room to list contained objects</source>
+                <target>Raum für enthaltene Objekte</target>
+            </trans-unit>
+            <!-- Object: SingleObject -->
+            <trans-unit id="object.singleObject" resname="object.singleObject" approved="yes">
+                <source>Single object</source>
+                <target>Einzelobjekt</target>
+            </trans-unit>
+            <trans-unit id="object.singleObject.parentObjectGroup" resname="object.singleObject.parentObjectGroup" approved="yes">
+                <source>Parent object group</source>
+                <target>Übergeordnete Objektgruppe</target>
+            </trans-unit>
+            <trans-unit id="object.singleObject.parentObjectGroup.description" resname="object.singleObject.parentObjectGroup.description" approved="yes">
+                <source>Object group that this single object is part of</source>
+                <target>Objektgruppe, zu der dieses Einzelobjekt gehört</target>
+            </trans-unit>
+            <trans-unit id="object.singleObject.parentSingleObject" resname="object.singleObject.parentSingleObject" approved="yes">
+                <source>Parent single object</source>
+                <target>Übergeordnetes Einzelobjekt</target>
+            </trans-unit>
+            <trans-unit id="object.singleObject.parentSingleObject.description" resname="object.singleObject.parentSingleObject.description" approved="yes">
+                <source>Single object that this single object is part of</source>
+                <target>Einzelobjekt, zu dem dieses Einzelobjekt gehört</target>
+            </trans-unit>
+            <trans-unit id="object.singleObject.mediaSchema" resname="object.singleObject.mediaSchema" approved="yes">
+                <source>Schema</source>
+                <target>Schema</target>
+            </trans-unit>
+            <trans-unit id="object.singleObject.mediaSchema.description" resname="object.singleObject.mediaSchema.description" approved="yes">
+                <source>Schematic related to the first media file</source>
+                <target>Schaubild, das zur ersten Mediendatei passt</target>
+            </trans-unit>
+            <!-- Object: ObjectGroup -->
+            <trans-unit id="object.objectGroup" resname="object.objectGroup" approved="yes">
+                <source>Object group</source>
+                <target>Objektgruppe</target>
+            </trans-unit>
+            <trans-unit id="object.objectGroup.objectGroupMap" resname="object.objectGroup.objectGroupMap" approved="yes">
+                <source>Map</source>
+                <target>Karte</target>
+            </trans-unit>
+            <trans-unit id="object.objectGroup.objectGroupMap.description" resname="object.objectGroup.objectGroupMap.description" approved="yes">
+                <source>Plan of this object group</source>
+                <target>Plan dieser Objektgruppe</target>
+            </trans-unit>
+            <!-- Object: LabelTag -->
+            <trans-unit id="object.labelTag.asLabelOfSingleObject" resname="object.labelTag.asLabelOfSingleObject" approved="yes">
+                <source>Usage as label of a single object</source>
+                <target>Verwendung als Label eines Einzelobjekts</target>
+            </trans-unit>
+            <trans-unit id="object.labelTag.asLabelOfSingleObject.description" resname="object.labelTag.asLabelOfSingleObject.description" approved="yes">
+                <source>List of single objects that use this tag as a label</source>
+                <target>Liste der Einzelobjekte, die dieses Schlagwort als Label verwenden</target>
+            </trans-unit>
+            <trans-unit id="object.labelTag.asLabelOfObjectGroup" resname="object.labelTag.asLabelOfObjectGroup" approved="yes">
+                <source>Usage as label of an object group</source>
+                <target>Verwendung als Label einer Objektgruppe</target>
+            </trans-unit>
+            <trans-unit id="object.labelTag.asLabelOfObjectGroup.description" resname="object.labelTag.asLabelOfObjectGroup.description" approved="yes">
+                <source>List of object groups that use this tag as a label</source>
+                <target>Liste der Objektgruppen, die dieses Schlagwort als Label verwenden</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
