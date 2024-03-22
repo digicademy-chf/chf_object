@@ -22,10 +22,9 @@ use TYPO3\CMS\Extbase\Persistence\Repository;
 class SingleObjectRepository extends Repository
 {
     protected $defaultOrderings = [
-        'sorting'          => QueryInterface::ORDER_ASCENDING,
-        'itemTitle'        => QueryInterface::ORDER_ASCENDING,
-        'publicationTitle' => QueryInterface::ORDER_ASCENDING,
-        'seriesTitle'      => QueryInterface::ORDER_ASCENDING,
-        'meetingTitle'     => QueryInterface::ORDER_ASCENDING,
+        'sorting'         => QueryInterface::ORDER_ASCENDING,
+        'isHighlight'     => QueryInterface::ORDER_ASCENDING,
+        'name'            => QueryInterface::ORDER_ASCENDING,
+        'alternativeName' => QueryInterface::ORDER_ASCENDING,
     ];
 }
