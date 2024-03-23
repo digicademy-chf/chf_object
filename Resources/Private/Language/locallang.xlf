@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="EXT:chf_object/Resources/Private/Language/locallang.xlf" date="2023-09-25T10:48:43Z" product-name="chf_object">
+        <header/>
+        <body>
+            <!-- Object: ObjectResource -->
+            <trans-unit id="object.objectResource.type.objectResource" resname="object.objectResource.type.objectResource">
+                <source>Object resource</source>
+            </trans-unit>
+            <trans-unit id="object.objectResource.allObjectGroups" resname="object.objectResource.allObjectGroups">
+                <source>All object groups</source>
+            </trans-unit>
+            <trans-unit id="object.objectResource.allObjectGroups.description" resname="object.objectResource.allObjectGroups.description">
+                <source>List of all object groups compiled in this resource</source>
+            </trans-unit>
+            <trans-unit id="object.objectResource.allSingleObjects" resname="object.objectResource.allSingleObjects">
+                <source>All single objects</source>
+            </trans-unit>
+            <trans-unit id="object.objectResource.allSingleObjects.description" resname="object.objectResource.allSingleObjects.description">
+                <source>List of all single objects compiled in this resource</source>
+            </trans-unit>
+            <!-- Object: AbstractObject -->
+            <trans-unit id="object.abstractObject.name" resname="object.abstractObject.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.name.description" resname="object.abstractObject.name.description">
+                <source>Title of this record</source>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.alternativeName" resname="object.abstractObject.alternativeName">
+                <source>Alternative Name</source>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.alternativeName.description" resname="object.abstractObject.alternativeName.description">
+                <source>Common alternative name that may, for example, be useful as a search term</source>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.isHistorical" resname="object.abstractObject.isHistorical">
+                <source>Historical object or group</source>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.isHistorical.description" resname="object.abstractObject.isHistorical.description">
+                <source>Marks this object or object group as historical</source>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.event" resname="object.abstractObject.event">
+                <source>Event</source>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.event.description" resname="object.abstractObject.event.description">
+                <source>Room to list object-related events</source>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.object" resname="object.abstractObject.object">
+                <source>Single object</source>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.object.description" resname="object.abstractObject.object.description">
+                <source>Room to list contained single objects</source>
+            </trans-unit>
+            <!-- Object: SingleObject -->
+            <trans-unit id="object.singleObject" resname="object.singleObject">
+                <source>Single object</source>
+            </trans-unit>
+            <trans-unit id="object.singleObject.parentObjectGroup" resname="object.singleObject.parentObjectGroup">
+                <source>Parent object group</source>
+            </trans-unit>
+            <trans-unit id="object.singleObject.parentObjectGroup.description" resname="object.singleObject.parentObjectGroup.description">
+                <source>Object group that this single object is part of</source>
+            </trans-unit>
+            <trans-unit id="object.singleObject.parentSingleObject" resname="object.singleObject.parentSingleObject">
+                <source>Parent single object</source>
+            </trans-unit>
+            <trans-unit id="object.singleObject.parentSingleObject.description" resname="object.singleObject.parentSingleObject.description">
+                <source>Single object that this single object is part of</source>
+            </trans-unit>
+            <trans-unit id="object.singleObject.mediaSchema" resname="object.singleObject.mediaSchema">
+                <source>Schema</source>
+            </trans-unit>
+            <trans-unit id="object.singleObject.mediaSchema.description" resname="object.singleObject.mediaSchema.description">
+                <source>Schematic related to the first media file</source>
+            </trans-unit>
+            <!-- Object: ObjectGroup -->
+            <trans-unit id="object.objectGroup" resname="object.objectGroup">
+                <source>Object group</source>
+            </trans-unit>
+            <trans-unit id="object.objectGroup.objectGroupMap" resname="object.objectGroup.objectGroupMap">
+                <source>Map</source>
+            </trans-unit>
+            <trans-unit id="object.objectGroup.objectGroupMap.description" resname="object.objectGroup.objectGroupMap.description">
+                <source>Plan of this object group</source>
+            </trans-unit>
+            <!-- Object: LabelTag -->
+            <trans-unit id="object.labelTag.asLabelOfSingleObject" resname="object.labelTag.asLabelOfSingleObject">
+                <source>Usage as label of a single object</source>
+            </trans-unit>
+            <trans-unit id="object.labelTag.asLabelOfSingleObject.description" resname="object.labelTag.asLabelOfSingleObject.description">
+                <source>List of single objects that use this tag as a label</source>
+            </trans-unit>
+            <trans-unit id="object.labelTag.asLabelOfObjectGroup" resname="object.labelTag.asLabelOfObjectGroup">
+                <source>Usage as label of an object group</source>
+            </trans-unit>
+            <trans-unit id="object.labelTag.asLabelOfObjectGroup.description" resname="object.labelTag.asLabelOfObjectGroup.description">
+                <source>List of object groups that use this tag as a label</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

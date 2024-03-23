@@ -30,8 +30,8 @@
                 <target>Name</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.name.description" resname="object.abstractObject.name.description" approved="yes">
-                <source>Title of this object</source>
-                <target>Titel dieses Objekts</target>
+                <source>Title of this record</source>
+                <target>Titel dieses Eintrags</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.alternativeName" resname="object.abstractObject.alternativeName" approved="yes">
                 <source>Alternative Name</source>
@@ -42,12 +42,12 @@
                 <target>Gebräuchlicher alternativer Name, der z.B. als Suchbegriff nützlich sein kann</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.isHistorical" resname="object.abstractObject.isHistorical" approved="yes">
-                <source>Historical object</source>
-                <target>Historisches Objekt</target>
+                <source>Historical object or group</source>
+                <target>Historisches Objekt bzw. Gruppe</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.isHistorical.description" resname="object.abstractObject.isHistorical.description" approved="yes">
-                <source>Marks this object as historical</source>
-                <target>Markiert dieses Objekt als historisch</target>
+                <source>Marks this object or object group as historical</source>
+                <target>Markiert dieses Objekt oder diese Objektgruppe als historisch</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.event" resname="object.abstractObject.event" approved="yes">
                 <source>Event</source>
@@ -58,12 +58,12 @@
                 <target>Raum für objektbezogene Ereignisse</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.object" resname="object.abstractObject.object" approved="yes">
-                <source>Object</source>
-                <target>Objekt</target>
+                <source>Single object</source>
+                <target>Einzelobjekt</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.object.description" resname="object.abstractObject.object.description" approved="yes">
-                <source>Room to list contained objects</source>
-                <target>Raum für enthaltene Objekte</target>
+                <source>Room to list contained single objects</source>
+                <target>Raum für enthaltene Einzelobjekte</target>
             </trans-unit>
             <!-- Object: SingleObject -->
             <trans-unit id="object.singleObject" resname="object.singleObject" approved="yes">
