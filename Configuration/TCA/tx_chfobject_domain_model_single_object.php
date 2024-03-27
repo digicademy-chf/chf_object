@@ -135,6 +135,7 @@ return [
                 'sortItems' => [
                     'label' => 'asc',
                 ],
+                'required' => true,
             ],
         ],
         'parentObjectGroup' => [
@@ -144,9 +145,9 @@ return [
             'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.singleObject.parentObjectGroup.description',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectSingleBox',
-                'foreign_table' => 'tx_chfobject_domain_model_single_object',
-                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_single_object}.{#pid}=###CURRENT_PID###',
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'tx_chfobject_domain_model_object_group',
+                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_object_group}.{#pid}=###CURRENT_PID###',
                 'sortItems' => [
                     'label' => 'asc',
                 ],
