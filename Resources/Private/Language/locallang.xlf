@@ -76,12 +76,6 @@
             <trans-unit id="object.objectGroup" resname="object.objectGroup">
                 <source>Object group</source>
             </trans-unit>
-            <trans-unit id="object.objectGroup.objectGroupMap" resname="object.objectGroup.objectGroupMap">
-                <source>Map</source>
-            </trans-unit>
-            <trans-unit id="object.objectGroup.objectGroupMap.description" resname="object.objectGroup.objectGroupMap.description">
-                <source>Plan of this object group</source>
-            </trans-unit>
             <!-- Object: LabelTag -->
             <trans-unit id="object.labelTag.asLabelOfSingleObject" resname="object.labelTag.asLabelOfSingleObject">
                 <source>Usage as label of a single object</source>

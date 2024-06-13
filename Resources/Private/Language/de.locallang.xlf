@@ -99,14 +99,6 @@
                 <source>Object group</source>
                 <target>Objektgruppe</target>
             </trans-unit>
-            <trans-unit id="object.objectGroup.objectGroupMap" resname="object.objectGroup.objectGroupMap" approved="yes">
-                <source>Map</source>
-                <target>Karte</target>
-            </trans-unit>
-            <trans-unit id="object.objectGroup.objectGroupMap.description" resname="object.objectGroup.objectGroupMap.description" approved="yes">
-                <source>Plan of this object group</source>
-                <target>Plan dieser Objektgruppe</target>
-            </trans-unit>
             <!-- Object: LabelTag -->
             <trans-unit id="object.labelTag.asLabelOfSingleObject" resname="object.labelTag.asLabelOfSingleObject" approved="yes">
                 <source>Usage as label of a single object</source>

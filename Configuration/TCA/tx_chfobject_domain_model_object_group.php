@@ -383,17 +383,6 @@ return [
                 ],
             ],
         ],
-        'objectGroupMap' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.objectGroup.objectGroupMap',
-            'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.objectGroup.objectGroupMap.description',
-            'config' => [
-                'type' => 'file',
-                'allowed' => 'common-media-types',
-                'maxitems' => 1,
-            ],
-        ],
         'object' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -629,7 +618,7 @@ return [
         '0' => [
             'showitem' => 'hiddenParentResource,uuid,nameAlternativeName,extent,isHistoricalIsHighlight,label,sameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,publicationDateRevisionNumberRevisionDate,editorialNote,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,geodata,objectGroupMap,object,event,agentRelation,locationRelation,contentElement,footnote,media,file,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,geodata,objectGroupPlan,object,event,agentRelation,locationRelation,contentElement,footnote,media,file,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.relations,linkRelation,volumeRelation,sourceRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,import,',
         ],
