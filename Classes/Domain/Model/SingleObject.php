@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace Digicademy\CHFObject\Domain\Model;
 
 use TYPO3\CMS\Core\Resource\FileReference;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 
 defined('TYPO3') or die();
@@ -41,6 +42,9 @@ class SingleObject extends AbstractObject
      * @var FileReference|LazyLoadingProxy
      */
     #[Lazy()]
+    #[Cascade([
+        'value' => 'remove',
+    ])]
     protected FileReference|LazyLoadingProxy $mediaSchema;
 
     /**
