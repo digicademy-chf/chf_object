@@ -70,7 +70,7 @@ defined('TYPO3') or die();
 );
 
 // Add select item 'number'
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tx_chfbase_domain_model_extent', 'number',
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tx_chfbase_domain_model_extent', 'type',
     [
         'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.extent.type.issue',
         'value' => 'number',
