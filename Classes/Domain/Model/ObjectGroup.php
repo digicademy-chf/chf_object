@@ -23,10 +23,10 @@ class ObjectGroup extends AbstractObject
     /**
      * Map of this object group
      * 
-     * @var MapResource|LazyLoadingProxy
+     * @var MapResource|LazyLoadingProxy|null
      */
     #[Lazy()]
-    protected MapResource|LazyLoadingProxy $objectGroupPlan;
+    protected MapResource|LazyLoadingProxy|null $objectGroupPlan = null;
 
     /**
      * Construct object

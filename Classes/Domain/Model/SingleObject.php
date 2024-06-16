@@ -24,29 +24,29 @@ class SingleObject extends AbstractObject
     /**
      * Object group that this single object is part of
      * 
-     * @var ObjectGroup|LazyLoadingProxy
+     * @var ObjectGroup|LazyLoadingProxy|null
      */
     #[Lazy()]
-    protected ObjectGroup|LazyLoadingProxy $parentObjectGroup;
+    protected ObjectGroup|LazyLoadingProxy|null $parentObjectGroup = null;
 
     /**
      * Single object that this single object is part of
      * 
-     * @var SingleObject|LazyLoadingProxy
+     * @var SingleObject|LazyLoadingProxy|null
      */
     #[Lazy()]
-    protected SingleObject|LazyLoadingProxy $parentSingleObject;
+    protected SingleObject|LazyLoadingProxy|null $parentSingleObject = null;
 
     /**
      * Schematic related to the first media file
      * 
-     * @var FileReference|LazyLoadingProxy
+     * @var FileReference|LazyLoadingProxy|null
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected FileReference|LazyLoadingProxy $mediaSchema;
+    protected FileReference|LazyLoadingProxy|null $mediaSchema = null;
 
     /**
      * Construct object

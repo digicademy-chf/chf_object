@@ -79,10 +79,10 @@ class AbstractObject extends AbstractHeritage
     /**
      * Feature to use as geodata of this single object or object group
      * 
-     * @var Feature|FeatureCollection|LazyLoadingProxy
+     * @var Feature|FeatureCollection|LazyLoadingProxy|null
      */
     #[Lazy()]
-    protected Feature|FeatureCollection|LazyLoadingProxy $geodata;
+    protected Feature|FeatureCollection|LazyLoadingProxy|null $geodata = null;
 
     /**
      * Room to list contained single objects
