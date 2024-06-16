@@ -12,6 +12,7 @@ namespace Digicademy\CHFObject\Domain\Model;
 use TYPO3\CMS\Core\Resource\FileReference;
 use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 
 defined('TYPO3') or die();
 
@@ -58,17 +59,6 @@ class SingleObject extends AbstractObject
     public function __construct(object $parentResource, string $uuid, string $name)
     {
         parent::__construct($parentResource, $uuid, $name);
-        $this->initializeObject();
-    }
-
-    /**
-     * Initialize object
-     */
-    public function initializeObject(): void
-    {
-        $this->parentObjectGroup = new LazyLoadingProxy();
-        $this->parentSingleObject = new LazyLoadingProxy();
-        $this->mediaSchema = new LazyLoadingProxy();
     }
 
     /**

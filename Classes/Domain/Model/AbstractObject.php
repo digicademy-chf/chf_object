@@ -12,8 +12,10 @@ namespace Digicademy\CHFObject\Domain\Model;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\Validate;
+use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use Digicademy\CHFBase\Domain\Model\AbstractHeritage;
+use Digicademy\CHFBase\Domain\Model\AgentRelation;
 use Digicademy\CHFBase\Domain\Model\Extent;
 use Digicademy\CHFBase\Domain\Model\LocationRelation;
 use Digicademy\CHFBase\Domain\Model\Period;
@@ -148,7 +150,6 @@ class AbstractObject extends AbstractHeritage
     public function initializeObject(): void
     {
         $this->extent ??= new ObjectStorage();
-        $this->geodata ??= new LazyLoadingProxy();
         $this->object ??= new ObjectStorage();
         $this->event ??= new ObjectStorage();
         $this->agentRelation ??= new ObjectStorage();

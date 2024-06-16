@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace Digicademy\CHFObject\Domain\Model;
 
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
+use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
 use Digicademy\CHFMap\Domain\Model\MapResource;
 
 defined('TYPO3') or die();
@@ -38,15 +39,6 @@ class ObjectGroup extends AbstractObject
     public function __construct(object $parentResource, string $uuid, string $name)
     {
         parent::__construct($parentResource, $uuid, $name);
-        $this->initializeObject();
-    }
-
-    /**
-     * Initialize object
-     */
-    public function initializeObject(): void
-    {
-        $this->objectGroupPlan = new LazyLoadingProxy();
     }
 
     /**

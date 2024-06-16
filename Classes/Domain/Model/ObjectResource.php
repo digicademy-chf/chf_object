@@ -73,7 +73,6 @@ class ObjectResource extends AbstractResource
      */
     public function initializeObject(): void
     {
-        $this->glossary = new LazyLoadingProxy();
         $this->allObjectGroups ??= new ObjectStorage();
         $this->allSingleObjects ??= new ObjectStorage();
     }
