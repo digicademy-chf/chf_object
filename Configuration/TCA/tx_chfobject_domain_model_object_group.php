@@ -670,7 +670,7 @@ return [
         '0' => [
             'showitem' => 'parentResource,uuid,--palette--;;nameAlternativeName,extent,--palette--;;isHistoricalIsHighlight,label,sameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,geodata,objectGroupPlan,object,event,agentRelation,locationRelation,contentElement,footnote,media,file,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,geodata,floorPlan,object,event,agentRelation,locationRelation,contentElement,footnote,media,file,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.relations,linkRelation,volumeRelation,sourceRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,import,',
         ],

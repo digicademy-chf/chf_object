@@ -26,7 +26,7 @@ class ObjectGroup extends AbstractObject
      * @var MapResource|LazyLoadingProxy|null
      */
     #[Lazy()]
-    protected MapResource|LazyLoadingProxy|null $objectGroupPlan = null;
+    protected MapResource|LazyLoadingProxy|null $floorPlan = null;
 
     /**
      * Construct object
@@ -42,25 +42,25 @@ class ObjectGroup extends AbstractObject
     }
 
     /**
-     * Get object group plan
+     * Get floor plan
      * 
      * @return MapResource
      */
-    public function getObjectGroupPlan(): MapResource
+    public function getFloorPlan(): MapResource
     {
-        if ($this->objectGroupPlan instanceof LazyLoadingProxy) {
-            $this->objectGroupPlan->_loadRealInstance();
+        if ($this->floorPlan instanceof LazyLoadingProxy) {
+            $this->floorPlan->_loadRealInstance();
         }
-        return $this->objectGroupPlan;
+        return $this->floorPlan;
     }
 
     /**
-     * Set object group plan
+     * Set floor plan
      * 
      * @param MapResource
      */
-    public function setObjectGroupPlan(MapResource $objectGroupPlan): void
+    public function setFloorPlan(MapResource $floorPlan): void
     {
-        $this->objectGroupPlan = $objectGroupPlan;
+        $this->floorPlan = $floorPlan;
     }
 }
