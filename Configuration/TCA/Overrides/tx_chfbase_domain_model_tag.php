@@ -35,7 +35,6 @@ defined('TYPO3') or die();
                 'MM_opposite_field' => 'label',
                 'MM_match_fields' => [
                     'fieldname' => 'asLabelOfSingleObject',
-                    'tablename' => 'tx_chfbase_domain_model_tag',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -73,7 +72,6 @@ defined('TYPO3') or die();
                 'MM_opposite_field' => 'label',
                 'MM_match_fields' => [
                     'fieldname' => 'asLabelOfObjectGroup',
-                    'tablename' => 'tx_chfbase_domain_model_tag',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,

@@ -360,7 +360,6 @@ return [
                 'MM_opposite_field' => 'record',
                 'MM_match_fields' => [
                     'fieldname' => 'authorshipRelation',
-                    'tablename' => 'tx_chfobject_domain_model_single_object',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -392,7 +391,6 @@ return [
                 'MM_opposite_field' => 'record',
                 'MM_match_fields' => [
                     'fieldname' => 'licenceRelation',
-                    'tablename' => 'tx_chfobject_domain_model_single_object',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -520,7 +518,6 @@ return [
                 'MM_opposite_field' => 'record',
                 'MM_match_fields' => [
                     'fieldname' => 'agentRelation',
-                    'tablename' => 'tx_chfobject_domain_model_single_object',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -552,7 +549,6 @@ return [
                 'MM_opposite_field' => 'record',
                 'MM_match_fields' => [
                     'fieldname' => 'locationRelation',
-                    'tablename' => 'tx_chfobject_domain_model_single_object',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
@@ -659,7 +655,6 @@ return [
                 'MM_opposite_field' => 'record',
                 'MM_match_fields' => [
                     'fieldname' => 'linkRelation',
-                    'tablename' => 'tx_chfobject_domain_model_single_object',
                 ],
                 'size' => 5,
                 'autoSizeMax' => 10,
