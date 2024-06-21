@@ -33,6 +33,10 @@ defined('TYPO3') or die();
                 'foreign_table_where' => 'AND {#tx_chfobject_domain_model_single_object}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfobject_domain_model_single_object_tag_label_mm',
                 'MM_opposite_field' => 'label',
+                'MM_match_fields' => [
+                    'fieldname' => 'asLabelOfSingleObject',
+                    'tablename' => 'tx_chfbase_domain_model_tag',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [
@@ -67,6 +71,10 @@ defined('TYPO3') or die();
                 'foreign_table_where' => 'AND {#tx_chfobject_domain_model_object_group}.{#pid}=###CURRENT_PID###',
                 'MM' => 'tx_chfobject_domain_model_object_group_tag_label_mm',
                 'MM_opposite_field' => 'label',
+                'MM_match_fields' => [
+                    'fieldname' => 'asLabelOfObjectGroup',
+                    'tablename' => 'tx_chfbase_domain_model_tag',
+                ],
                 'size' => 5,
                 'autoSizeMax' => 10,
                 'fieldControl' => [

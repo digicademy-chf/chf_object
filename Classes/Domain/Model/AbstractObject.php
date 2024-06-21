@@ -90,9 +90,6 @@ class AbstractObject extends AbstractHeritage
      * @var ?ObjectStorage<SingleObject>
      */
     #[Lazy()]
-    #[Cascade([
-        'value' => 'remove',
-    ])]
     protected ?ObjectStorage $object = null;
 
     /**

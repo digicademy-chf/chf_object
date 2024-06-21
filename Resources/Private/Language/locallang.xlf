@@ -5,7 +5,7 @@
         <body>
             <!-- Object: ObjectResource -->
             <trans-unit id="object.objectResource.type.objectResource" resname="object.objectResource.type.objectResource">
-                <source>Object resource</source>
+                <source>Object collection</source>
             </trans-unit>
             <trans-unit id="object.objectResource.allObjectGroups" resname="object.objectResource.allObjectGroups">
                 <source>All object groups</source>

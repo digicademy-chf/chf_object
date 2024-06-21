@@ -5,8 +5,8 @@
         <body>
             <!-- Object: ObjectResource -->
             <trans-unit id="object.objectResource.type.objectResource" resname="object.objectResource.type.objectResource" approved="yes">
-                <source>Object resource</source>
-                <target>Objektressource</target>
+                <source>Object collection</source>
+                <target>Objektsammlung</target>
             </trans-unit>
             <trans-unit id="object.objectResource.allObjectGroups" resname="object.objectResource.allObjectGroups" approved="yes">
                 <source>All object groups</source>
