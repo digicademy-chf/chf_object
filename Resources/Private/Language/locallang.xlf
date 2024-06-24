@@ -30,13 +30,13 @@
                 <source>Alternative Name</source>
             </trans-unit>
             <trans-unit id="object.abstractObject.alternativeName.description" resname="object.abstractObject.alternativeName.description">
-                <source>Common alternative name that may, for example, be useful as a search term</source>
+                <source>Common alternative name used, i.e., as a search term</source>
             </trans-unit>
             <trans-unit id="object.abstractObject.isHistorical" resname="object.abstractObject.isHistorical">
-                <source>Historical object or group</source>
+                <source>Historical record</source>
             </trans-unit>
             <trans-unit id="object.abstractObject.isHistorical.description" resname="object.abstractObject.isHistorical.description">
-                <source>Marks this object or object group as historical</source>
+                <source>Marks object (group) as historical</source>
             </trans-unit>
             <trans-unit id="object.abstractObject.event" resname="object.abstractObject.event">
                 <source>Event</source>
@@ -67,7 +67,7 @@
                 <source>Single object that this single object is part of</source>
             </trans-unit>
             <trans-unit id="object.singleObject.mediaSchema" resname="object.singleObject.mediaSchema">
-                <source>Schema</source>
+                <source>Media schema</source>
             </trans-unit>
             <trans-unit id="object.singleObject.mediaSchema.description" resname="object.singleObject.mediaSchema.description">
                 <source>Schematic related to the first media file</source>
@@ -81,13 +81,38 @@
                 <source>Usage as label of a single object</source>
             </trans-unit>
             <trans-unit id="object.labelTag.asLabelOfSingleObject.description" resname="object.labelTag.asLabelOfSingleObject.description">
-                <source>List of single objects that use this tag as a label</source>
+                <source>List of single objects that use this label</source>
             </trans-unit>
             <trans-unit id="object.labelTag.asLabelOfObjectGroup" resname="object.labelTag.asLabelOfObjectGroup">
                 <source>Usage as label of an object group</source>
             </trans-unit>
             <trans-unit id="object.labelTag.asLabelOfObjectGroup.description" resname="object.labelTag.asLabelOfObjectGroup.description">
-                <source>List of object groups that use this tag as a label</source>
+                <source>List of object groups that use this label</source>
+            </trans-unit>
+            <!-- Object: Extent -->
+            <trans-unit id="object.extent.type.height" resname="object.extent.type.height" approved="yes">
+                <source>Height</source>
+            </trans-unit>
+            <trans-unit id="object.extent.type.width" resname="object.extent.type.width" approved="yes">
+                <source>Width</source>
+            </trans-unit>
+            <trans-unit id="object.extent.type.diameter" resname="object.extent.type.diameter" approved="yes">
+                <source>Diameter</source>
+            </trans-unit>
+            <trans-unit id="object.extent.type.inventoryNumber" resname="object.extent.type.inventoryNumber" approved="yes">
+                <source>Inventory number</source>
+            </trans-unit>
+            <trans-unit id="object.extent.type.positionOnPlan" resname="object.extent.type.positionOnPlan" approved="yes">
+                <source>Position on plan</source>
+            </trans-unit>
+            <trans-unit id="object.extent.type.number" resname="object.extent.type.number" approved="yes">
+                <source>Window number</source>
+            </trans-unit>
+            <trans-unit id="object.extent.type.panelRow" resname="object.extent.type.panelRow" approved="yes">
+                <source>Panel row</source>
+            </trans-unit>
+            <trans-unit id="object.extent.type.panelColumn" resname="object.extent.type.panelColumn" approved="yes">
+                <source>Panel column</source>
             </trans-unit>
         </body>
     </file>

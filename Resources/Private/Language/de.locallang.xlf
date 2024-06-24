@@ -38,16 +38,16 @@
                 <target>Alternativer Name</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.alternativeName.description" resname="object.abstractObject.alternativeName.description" approved="yes">
-                <source>Common alternative name that may, for example, be useful as a search term</source>
-                <target>Gebräuchlicher alternativer Name, der z.B. als Suchbegriff nützlich sein kann</target>
+                <source>Common alternative name used, i.e., as a search term</source>
+                <target>Gebräuchlicher alternativer Name, z.B. als Suchbegriff</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.isHistorical" resname="object.abstractObject.isHistorical" approved="yes">
-                <source>Historical object or group</source>
-                <target>Historisches Objekt bzw. Gruppe</target>
+                <source>Historical record</source>
+                <target>Historischer Eintrag</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.isHistorical.description" resname="object.abstractObject.isHistorical.description" approved="yes">
-                <source>Marks this object or object group as historical</source>
-                <target>Markiert dieses Objekt oder diese Objektgruppe als historisch</target>
+                <source>Marks object (group) as historical</source>
+                <target>Markiert Objekt(gruppe) als historisch</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.event" resname="object.abstractObject.event" approved="yes">
                 <source>Event</source>
@@ -87,8 +87,8 @@
                 <target>Einzelobjekt, zu dem dieses Einzelobjekt gehört</target>
             </trans-unit>
             <trans-unit id="object.singleObject.mediaSchema" resname="object.singleObject.mediaSchema" approved="yes">
-                <source>Schema</source>
-                <target>Schema</target>
+                <source>Media schema</source>
+                <target>Medienschema</target>
             </trans-unit>
             <trans-unit id="object.singleObject.mediaSchema.description" resname="object.singleObject.mediaSchema.description" approved="yes">
                 <source>Schematic related to the first media file</source>
@@ -105,16 +105,49 @@
                 <target>Verwendung als Label eines Einzelobjekts</target>
             </trans-unit>
             <trans-unit id="object.labelTag.asLabelOfSingleObject.description" resname="object.labelTag.asLabelOfSingleObject.description" approved="yes">
-                <source>List of single objects that use this tag as a label</source>
-                <target>Liste der Einzelobjekte, die dieses Schlagwort als Label verwenden</target>
+                <source>List of single objects that use this label</source>
+                <target>Liste der Einzelobjekte, die dieses Label verwenden</target>
             </trans-unit>
             <trans-unit id="object.labelTag.asLabelOfObjectGroup" resname="object.labelTag.asLabelOfObjectGroup" approved="yes">
                 <source>Usage as label of an object group</source>
                 <target>Verwendung als Label einer Objektgruppe</target>
             </trans-unit>
             <trans-unit id="object.labelTag.asLabelOfObjectGroup.description" resname="object.labelTag.asLabelOfObjectGroup.description" approved="yes">
-                <source>List of object groups that use this tag as a label</source>
-                <target>Liste der Objektgruppen, die dieses Schlagwort als Label verwenden</target>
+                <source>List of object groups that use this label</source>
+                <target>Liste der Objektgruppen, die dieses Label verwenden</target>
+            </trans-unit>
+            <!-- Object: Extent -->
+            <trans-unit id="object.extent.type.height" resname="object.extent.type.height" approved="yes">
+                <source>Height</source>
+                <target>Höhe</target>
+            </trans-unit>
+            <trans-unit id="object.extent.type.width" resname="object.extent.type.width" approved="yes">
+                <source>Width</source>
+                <target>Breit</target>
+            </trans-unit>
+            <trans-unit id="object.extent.type.diameter" resname="object.extent.type.diameter" approved="yes">
+                <source>Diameter</source>
+                <target>Durchmesser</target>
+            </trans-unit>
+            <trans-unit id="object.extent.type.inventoryNumber" resname="object.extent.type.inventoryNumber" approved="yes">
+                <source>Inventory number</source>
+                <target>Inventarnummer</target>
+            </trans-unit>
+            <trans-unit id="object.extent.type.positionOnPlan" resname="object.extent.type.positionOnPlan" approved="yes">
+                <source>Position on plan</source>
+                <target>Position im Grundriss</target>
+            </trans-unit>
+            <trans-unit id="object.extent.type.number" resname="object.extent.type.number" approved="yes">
+                <source>Window number</source>
+                <target>Fensternummer</target>
+            </trans-unit>
+            <trans-unit id="object.extent.type.panelRow" resname="object.extent.type.panelRow" approved="yes">
+                <source>Panel row</source>
+                <target>Zeile der Scheibe</target>
+            </trans-unit>
+            <trans-unit id="object.extent.type.panelColumn" resname="object.extent.type.panelColumn" approved="yes">
+                <source>Panel column</source>
+                <target>Bahn der Scheibe</target>
             </trans-unit>
         </body>
     </file>

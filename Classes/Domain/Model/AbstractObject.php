@@ -43,7 +43,7 @@ class AbstractObject extends AbstractHeritage
     protected string $name = '';
 
     /**
-     * Common alternative name that may, for example, be useful as a search term
+     * Common alternative name used, i.e., as a search term
      * 
      * @var string
      */

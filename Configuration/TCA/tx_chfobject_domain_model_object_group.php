@@ -228,6 +228,20 @@ return [
                     'showAllLocalizationLink' => true,
                     'showSynchronizationLink' => true,
                 ],
+                'overrideChildTca' => [
+                    'columns' => [
+                        'type' => [
+                            'config' => [
+                                'items' => [
+                                    [
+                                        'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.extent.type.positionOnPlan',
+                                        'value' => 'positionOnPlan',
+                                    ],
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
             ],
         ],
         'isHistorical' => [
@@ -267,24 +281,19 @@ return [
             'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.label.description',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
+                'renderType' => 'selectTree',
                 'foreign_table' => 'tx_chfbase_domain_model_tag',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_tag}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfbase_domain_model_tag}.{#type}=\'label\'',
                 'MM' => 'tx_chfobject_domain_model_object_group_tag_label_mm',
-                'size' => 5,
-                'autoSizeMax' => 10,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => false,
+                'treeConfig' => [
+                    'parentField' => 'parentLabelTag',
+                    'appearance' => [
+                        'showHeader' => true,
+                        'expandAll' => true,
                     ],
                 ],
+                'size' => 8,
             ],
         ],
         'sameAs' => [
@@ -315,8 +324,7 @@ return [
             'label' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.authorshipRelation',
             'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.authorshipRelation.description',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
+                'type' => 'inline',
                 'foreign_table' => 'tx_chfbase_domain_model_relation',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_relation}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfbase_domain_model_relation}.{#type}=\'authorshipRelation\'',
@@ -325,18 +333,15 @@ return [
                 'MM_match_fields' => [
                     'fieldname' => 'authorshipRelation',
                 ],
-                'size' => 5,
-                'autoSizeMax' => 10,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => false,
-                    ],
+                'appearance' => [
+                    'collapseAll' => true,
+                    'expandSingle' => true,
+                    'newRecordLinkAddTitle' => true,
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink' => true,
+                    'showSynchronizationLink' => true,
                 ],
             ],
         ],
@@ -346,8 +351,7 @@ return [
             'label' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.licenceRelation',
             'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.licenceRelation.description',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
+                'type' => 'inline',
                 'foreign_table' => 'tx_chfbase_domain_model_relation',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_relation}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfbase_domain_model_relation}.{#type}=\'licenceRelation\'',
@@ -356,18 +360,15 @@ return [
                 'MM_match_fields' => [
                     'fieldname' => 'licenceRelation',
                 ],
-                'size' => 5,
-                'autoSizeMax' => 10,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => false,
-                    ],
+                'appearance' => [
+                    'collapseAll' => true,
+                    'expandSingle' => true,
+                    'newRecordLinkAddTitle' => true,
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink' => true,
+                    'showSynchronizationLink' => true,
                 ],
             ],
         ],
@@ -448,8 +449,8 @@ return [
         'event' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.abstractObject.event',
-            'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.abstractObject.event.description',
+            'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.abstractObject.event',
+            'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.abstractObject.event.description',
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => 'tx_chfbase_domain_model_period',
@@ -473,8 +474,7 @@ return [
             'label' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.agentRelation',
             'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.agentRelation.description',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
+                'type' => 'inline',
                 'foreign_table' => 'tx_chfbase_domain_model_relation',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_relation}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfbase_domain_model_relation}.{#type}=\'agentRelation\'',
@@ -483,18 +483,15 @@ return [
                 'MM_match_fields' => [
                     'fieldname' => 'agentRelation',
                 ],
-                'size' => 5,
-                'autoSizeMax' => 10,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => false,
-                    ],
+                'appearance' => [
+                    'collapseAll' => true,
+                    'expandSingle' => true,
+                    'newRecordLinkAddTitle' => true,
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink' => true,
+                    'showSynchronizationLink' => true,
                 ],
             ],
         ],
@@ -504,8 +501,7 @@ return [
             'label' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.locationRelation',
             'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.locationRelation.description',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
+                'type' => 'inline',
                 'foreign_table' => 'tx_chfbase_domain_model_relation',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_relation}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfbase_domain_model_relation}.{#type}=\'locationRelation\'',
@@ -514,18 +510,15 @@ return [
                 'MM_match_fields' => [
                     'fieldname' => 'locationRelation',
                 ],
-                'size' => 5,
-                'autoSizeMax' => 10,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => false,
-                    ],
+                'appearance' => [
+                    'collapseAll' => true,
+                    'expandSingle' => true,
+                    'newRecordLinkAddTitle' => true,
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink' => true,
+                    'showSynchronizationLink' => true,
                 ],
             ],
         ],
@@ -599,8 +592,7 @@ return [
             'label' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.linkRelation',
             'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.linkRelation.description',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
+                'type' => 'inline',
                 'foreign_table' => 'tx_chfbase_domain_model_relation',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_relation}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfbase_domain_model_relation}.{#type}=\'linkRelation\'',
@@ -609,18 +601,15 @@ return [
                 'MM_match_fields' => [
                     'fieldname' => 'linkRelation',
                 ],
-                'size' => 5,
-                'autoSizeMax' => 10,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => false,
-                    ],
+                'appearance' => [
+                    'collapseAll' => true,
+                    'expandSingle' => true,
+                    'newRecordLinkAddTitle' => true,
+                    'levelLinksPosition' => 'bottom',
+                    'useSortable' => true,
+                    'showPossibleLocalizationRecords' => true,
+                    'showAllLocalizationLink' => true,
+                    'showSynchronizationLink' => true,
                 ],
             ],
         ],
@@ -651,23 +640,44 @@ return [
         ],
     ],
     'palettes' => [
-        'nameAlternativeName' => [
-            'showitem' => 'name,alternativeName,',
+        'isHighlightIsHistoricalUuid' => [
+            'showitem' => 'isHighlight,isHistorical,uuid',
         ],
-        'isHistoricalIsHighlight' => [
-            'showitem' => 'isHistorical,isHighlight,',
+        'nameAlternativeNameExtent' => [
+            'showitem' => 'name,alternativeName,--linebreak--,extent,',
+        ],
+        'parentResourceLabel' => [
+            'showitem' => 'parentResource,label,',
+        ],
+        'authorshipRelationLicenceRelation' => [
+            'showitem' => 'authorshipRelation,--linebreak--,licenceRelation,',
         ],
         'publicationDateRevisionDateRevisionNumberEditorialNote' => [
             'showitem' => 'publicationDate,revisionDate,revisionNumber,--linebreak--,editorialNote,',
         ],
+        'geodataFloorPlan' => [
+            'showitem' => 'geodata,--linebreak--,floorPlan,',
+        ],
+        'eventAgentRelationLocationRelation' => [
+            'showitem' => 'event,--linebreak--,agentRelation,--linebreak--,locationRelation,',
+        ],
+        'contentElementFootnote' => [
+            'showitem' => 'contentElement,--linebreak--,footnote,',
+        ],
+        'mediaFile' => [
+            'showitem' => 'media,--linebreak--,file,',
+        ],
+        'importOriginImport' => [
+            'showitem' => 'importOrigin,--linebreak--,import,',
+        ],
     ],
     'types' => [
         '0' => [
-            'showitem' => 'parentResource,uuid,--palette--;;nameAlternativeName,extent,--palette--;;isHistoricalIsHighlight,label,sameAs,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,authorshipRelation,licenceRelation,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,geodata,floorPlan,object,event,agentRelation,locationRelation,contentElement,footnote,media,file,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.relations,linkRelation,volumeRelation,sourceRelation,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,importOrigin,import,',
+            'showitem' => '--palette--;;isHighlightIsHistoricalUuid,--palette--;;nameAlternativeNameExtent,--palette--;;parentResourceLabel,sameAs,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;authorshipRelationLicenceRelation,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.content,--palette--;;geodataFloorPlan,object,--palette--;;eventAgentRelationLocationRelation,--palette--;;contentElementFootnote,--palette--;;mediaFile,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.relations,linkRelation,publicationRelation,sourceRelation,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImport,',
         ],
     ],
 ];
