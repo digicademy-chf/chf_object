@@ -55,7 +55,7 @@
             </trans-unit>
             <trans-unit id="object.abstractObject.event.description" resname="object.abstractObject.event.description" approved="yes">
                 <source>Room to list object-related events</source>
-                <target>Raum für objektbezogene Ereignisse</target>
+                <target>Platz für objektbezogene Ereignisse</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.object" resname="object.abstractObject.object" approved="yes">
                 <source>Single object</source>
@@ -63,7 +63,7 @@
             </trans-unit>
             <trans-unit id="object.abstractObject.object.description" resname="object.abstractObject.object.description" approved="yes">
                 <source>Room to list contained single objects</source>
-                <target>Raum für enthaltene Einzelobjekte</target>
+                <target>Platz für enthaltene Einzelobjekte</target>
             </trans-unit>
             <!-- Object: SingleObject -->
             <trans-unit id="object.singleObject" resname="object.singleObject" approved="yes">
