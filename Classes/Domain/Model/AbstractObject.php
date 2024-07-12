@@ -93,7 +93,7 @@ class AbstractObject extends AbstractHeritage
     protected ?ObjectStorage $object = null;
 
     /**
-     * Room to list historical events
+     * Room to list object-related events
      * 
      * @var ?ObjectStorage<Period>
      */
