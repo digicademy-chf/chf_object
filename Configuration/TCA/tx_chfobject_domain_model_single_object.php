@@ -275,39 +275,47 @@ return [
                     'columns' => [
                         'type' => [
                             'config' => [
-                                'items' => [
+                                'items' => [ // Please also add new items in this list to the overwrite of tx_chfbase_domain_model_extent
                                     [
                                         'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.extent.type.height',
                                         'value' => 'height',
+                                        'group' => 'chfObject',
                                     ],
                                     [
                                         'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.extent.type.width',
                                         'value' => 'width',
+                                        'group' => 'chfObject',
                                     ],
                                     [
                                         'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.extent.type.diameter',
                                         'value' => 'diameter',
+                                        'group' => 'chfObject',
                                     ],
                                     [
                                         'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.extent.type.inventoryNumber',
                                         'value' => 'inventoryNumber',
+                                        'group' => 'chfObject',
                                     ],
                                     [
                                         'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.extent.type.positionOnPlan',
                                         'value' => 'positionOnPlan',
+                                        'group' => 'chfObject',
                                     ],
                                     [
                                         'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.extent.type.number',
                                         'value' => 'number',
+                                        'group' => 'chfObject',
                                     ],
                                     [
                                         'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.extent.type.panelRow',
                                         'value' => 'panelRow',
+                                        'group' => 'chfObject',
                                     ],
                                     [
                                         'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.extent.type.panelColumn',
                                         'value' => 'panelColumn',
-                                    ],
+                                        'group' => 'chfObject',
+                                    ]
                                 ],
                             ],
                         ],
@@ -420,6 +428,7 @@ return [
                         'type' => [
                             'config' => [
                                 'default' => 'authorshipRelation',
+                                'readOnly' => true,
                             ],
                         ],
                     ],
@@ -456,6 +465,7 @@ return [
                         'type' => [
                             'config' => [
                                 'default' => 'licenceRelation',
+                                'readOnly' => true,
                             ],
                         ],
                     ],
@@ -662,6 +672,7 @@ return [
                         'type' => [
                             'config' => [
                                 'default' => 'agentRelation',
+                                'readOnly' => true,
                             ],
                         ],
                     ],
@@ -698,6 +709,7 @@ return [
                         'type' => [
                             'config' => [
                                 'default' => 'locationRelation',
+                                'readOnly' => true,
                             ],
                         ],
                     ],
@@ -808,6 +820,7 @@ return [
                         'type' => [
                             'config' => [
                                 'default' => 'linkRelation',
+                                'readOnly' => true,
                             ],
                         ],
                     ],
