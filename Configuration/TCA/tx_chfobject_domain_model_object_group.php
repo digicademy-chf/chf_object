@@ -29,7 +29,7 @@ return [
         'sortby'                   => 'sorting',
         'default_sortby'           => 'isHighlight ASC,name ASC,alternativeName ASC',
         'versioningWS'             => true,
-        'iconfile'                 => 'EXT:chf_object/Resources/Public/Icons/ObjectGroup.svg',
+        'iconfile'                 => 'EXT:chf_object/Resources/Public/Icons/TableObjectGroup.svg',
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',

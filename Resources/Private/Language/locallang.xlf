@@ -90,29 +90,43 @@
                 <source>List of object groups that use this label</source>
             </trans-unit>
             <!-- Object: Extent -->
-            <trans-unit id="object.extent.type.height" resname="object.extent.type.height" approved="yes">
+            <trans-unit id="object.extent.type.height" resname="object.extent.type.height">
                 <source>Height</source>
             </trans-unit>
-            <trans-unit id="object.extent.type.width" resname="object.extent.type.width" approved="yes">
+            <trans-unit id="object.extent.type.width" resname="object.extent.type.width">
                 <source>Width</source>
             </trans-unit>
-            <trans-unit id="object.extent.type.diameter" resname="object.extent.type.diameter" approved="yes">
+            <trans-unit id="object.extent.type.diameter" resname="object.extent.type.diameter">
                 <source>Diameter</source>
             </trans-unit>
-            <trans-unit id="object.extent.type.inventoryNumber" resname="object.extent.type.inventoryNumber" approved="yes">
+            <trans-unit id="object.extent.type.inventoryNumber" resname="object.extent.type.inventoryNumber">
                 <source>Inventory number</source>
             </trans-unit>
-            <trans-unit id="object.extent.type.positionOnPlan" resname="object.extent.type.positionOnPlan" approved="yes">
+            <trans-unit id="object.extent.type.positionOnPlan" resname="object.extent.type.positionOnPlan">
                 <source>Position on plan</source>
             </trans-unit>
-            <trans-unit id="object.extent.type.number" resname="object.extent.type.number" approved="yes">
+            <trans-unit id="object.extent.type.number" resname="object.extent.type.number">
                 <source>Window number</source>
             </trans-unit>
-            <trans-unit id="object.extent.type.panelRow" resname="object.extent.type.panelRow" approved="yes">
+            <trans-unit id="object.extent.type.panelRow" resname="object.extent.type.panelRow">
                 <source>Panel row</source>
             </trans-unit>
-            <trans-unit id="object.extent.type.panelColumn" resname="object.extent.type.panelColumn" approved="yes">
+            <trans-unit id="object.extent.type.panelColumn" resname="object.extent.type.panelColumn">
                 <source>Panel column</source>
+            </trans-unit>
+            <!-- Plugin: ObjectGallery -->
+            <trans-unit id="plugin.objectGallery" resname="plugin.objectGallery">
+                <source>Object gallery</source>
+            </trans-unit>
+            <trans-unit id="plugin.objectGallery.description" resname="plugin.objectGallery.description">
+                <source>List and individual object view</source>
+            </trans-unit>
+            <!-- Plugin: ObjectContext -->
+            <trans-unit id="plugin.objectContext" resname="plugin.objectContext">
+                <source>Object context</source>
+            </trans-unit>
+            <trans-unit id="plugin.objectContext.description" resname="plugin.objectContext.description">
+                <source>View objects by location, date, and agent</source>
             </trans-unit>
         </body>
     </file>

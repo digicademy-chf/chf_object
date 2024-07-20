@@ -149,6 +149,24 @@
                 <source>Panel column</source>
                 <target>Bahn der Scheibe</target>
             </trans-unit>
+            <!-- Plugin: ObjectGallery -->
+            <trans-unit id="plugin.objectGallery" resname="plugin.objectGallery" approved="yes">
+                <source>Object gallery</source>
+                <target>Objektgalerie</target>
+            </trans-unit>
+            <trans-unit id="plugin.objectGallery.description" resname="plugin.objectGallery.description" approved="yes">
+                <source>List and individual object view</source>
+                <target>Liste und Einzelanzeige von Objekten</target>
+            </trans-unit>
+            <!-- Plugin: ObjectContext -->
+            <trans-unit id="plugin.objectContext" resname="plugin.objectContext" approved="yes">
+                <source>Object context</source>
+                <target>Objektkontext</target>
+            </trans-unit>
+            <trans-unit id="plugin.objectContext.description" resname="plugin.objectContext.description" approved="yes">
+                <source>View objects by location, date, and agent</source>
+                <target>Objektanzeige nach Ort, Zeit und Akteur:innen</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>
