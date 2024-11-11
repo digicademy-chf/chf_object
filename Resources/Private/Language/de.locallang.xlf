@@ -55,7 +55,7 @@
             </trans-unit>
             <trans-unit id="object.abstractObject.event.description" resname="object.abstractObject.event.description" approved="yes">
                 <source>Room to list object-related events</source>
-                <target>Platz für objektbezogene Ereignisse</target>
+                <target>Raum für objektbezogene Ereignisse</target>
             </trans-unit>
             <trans-unit id="object.abstractObject.object" resname="object.abstractObject.object" approved="yes">
                 <source>Single object</source>
@@ -63,7 +63,15 @@
             </trans-unit>
             <trans-unit id="object.abstractObject.object.description" resname="object.abstractObject.object.description" approved="yes">
                 <source>Room to list contained single objects</source>
-                <target>Platz für enthaltene Einzelobjekte</target>
+                <target>Raum für enthaltene Einzelobjekte</target>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.parentLocation" resname="object.abstractObject.parentLocation" approved="yes">
+                <source>Parent location</source>
+                <target>Übergeordneter Ort</target>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.parentLocation.description" resname="object.abstractObject.parentLocation.description" approved="yes">
+                <source>Place that this object (group) is part of</source>
+                <target>Ortsangabe, zu der diese:s Objekt(gruppe) gehört</target>
             </trans-unit>
             <!-- Object: SingleObject -->
             <trans-unit id="object.singleObject" resname="object.singleObject" approved="yes">
@@ -148,6 +156,23 @@
             <trans-unit id="object.extent.type.panelColumn" resname="object.extent.type.panelColumn" approved="yes">
                 <source>Panel column</source>
                 <target>Bahn der Scheibe</target>
+            </trans-unit>
+            <!-- Object: Location -->
+            <trans-unit id="object.location.object" resname="object.location.object" approved="yes">
+                <source>Single object</source>
+                <target>Einzelobjekt</target>
+            </trans-unit>
+            <trans-unit id="object.location.object.description" resname="object.location.object.description" approved="yes">
+                <source>Room to list single objects as part of this location</source>
+                <target>Raum für zu diesem Ort gehörige Einzelobjekte</target>
+            </trans-unit>
+            <trans-unit id="object.location.objectGroup" resname="object.location.objectGroup" approved="yes">
+                <source>Object group</source>
+                <target>Objektgruppe</target>
+            </trans-unit>
+            <trans-unit id="object.location.objectGroup.description" resname="object.location.objectGroup.description" approved="yes">
+                <source>Room to list object groups as part of this location</source>
+                <target>Raum für zu diesem Ort gehörige Objektgruppen</target>
             </trans-unit>
             <!-- Plugin: ObjectGallery -->
             <trans-unit id="plugin.objectGallery" resname="plugin.objectGallery" approved="yes">

@@ -50,6 +50,12 @@
             <trans-unit id="object.abstractObject.object.description" resname="object.abstractObject.object.description">
                 <source>Room to list contained single objects</source>
             </trans-unit>
+            <trans-unit id="object.abstractObject.parentLocation" resname="object.abstractObject.parentLocation">
+                <source>Parent location</source>
+            </trans-unit>
+            <trans-unit id="object.abstractObject.parentLocation.description" resname="object.abstractObject.parentLocation.description">
+                <source>Place that this object (group) is part of</source>
+            </trans-unit>
             <!-- Object: SingleObject -->
             <trans-unit id="object.singleObject" resname="object.singleObject">
                 <source>Single object</source>
@@ -113,6 +119,19 @@
             </trans-unit>
             <trans-unit id="object.extent.type.panelColumn" resname="object.extent.type.panelColumn">
                 <source>Panel column</source>
+            </trans-unit>
+            <!-- Object: Location -->
+            <trans-unit id="object.location.object" resname="object.location.object">
+                <source>Single object</source>
+            </trans-unit>
+            <trans-unit id="object.location.object.description" resname="object.location.object.description">
+                <source>Room to list single objects as part of this location</source>
+            </trans-unit>
+            <trans-unit id="object.location.objectGroup" resname="object.location.objectGroup">
+                <source>Object group</source>
+            </trans-unit>
+            <trans-unit id="object.location.objectGroup.description" resname="object.location.objectGroup.description">
+                <source>Room to list object groups as part of this location</source>
             </trans-unit>
             <!-- Plugin: ObjectGallery -->
             <trans-unit id="plugin.objectGallery" resname="plugin.objectGallery">

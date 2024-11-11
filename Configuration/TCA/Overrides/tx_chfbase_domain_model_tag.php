@@ -18,7 +18,7 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add column 'asLabelOfSingleObject'
+// Add columns 'asLabelOfSingleObject' and 'asLabelOfObjectGroup'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfbase_domain_model_tag',
     [
         'asLabelOfSingleObject' => [
@@ -38,12 +38,6 @@ defined('TYPO3') or die();
                 'autoSizeMax' => 10,
             ],
         ],
-    ]
-);
-
-// Add column 'asLabelOfObjectGroup'
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfbase_domain_model_tag',
-    [
         'asLabelOfObjectGroup' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',

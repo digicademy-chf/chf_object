@@ -24,23 +24,12 @@ defined('TYPO3') or die();
 class ObjectResource extends AbstractResource
 {
     /**
-     * Resource to use as a glossary for this resource
+     * Glossary of this resource
      * 
      * @var GlossaryResource|LazyLoadingProxy|null
      */
     #[Lazy()]
     protected GlossaryResource|LazyLoadingProxy|null $glossary = null;
-
-    /**
-     * List of all object groups compiled in this resource
-     * 
-     * @var ?ObjectStorage<ObjectGroup>
-     */
-    #[Lazy()]
-    #[Cascade([
-        'value' => 'remove',
-    ])]
-    protected ?ObjectStorage $allObjectGroups = null;
 
     /**
      * List of all single objects compiled in this resource
@@ -54,15 +43,26 @@ class ObjectResource extends AbstractResource
     protected ?ObjectStorage $allSingleObjects = null;
 
     /**
+     * List of all object groups compiled in this resource
+     * 
+     * @var ?ObjectStorage<ObjectGroup>
+     */
+    #[Lazy()]
+    #[Cascade([
+        'value' => 'remove',
+    ])]
+    protected ?ObjectStorage $allObjectGroups = null;
+
+    /**
      * Construct object
      *
-     * @param string $uuid
      * @param string $langCode
+     * @param string $uuid
      * @return ObjectResource
      */
-    public function __construct(string $uuid, string $langCode)
+    public function __construct(string $langCode, string $uuid)
     {
-        parent::__construct($uuid, $langCode);
+        parent::__construct($langCode, $uuid);
         $this->initializeObject();
 
         $this->setType('objectResource');
@@ -73,8 +73,8 @@ class ObjectResource extends AbstractResource
      */
     public function initializeObject(): void
     {
-        $this->allObjectGroups ??= new ObjectStorage();
         $this->allSingleObjects ??= new ObjectStorage();
+        $this->allObjectGroups ??= new ObjectStorage();
     }
 
     /**
@@ -98,55 +98,6 @@ class ObjectResource extends AbstractResource
     public function setGlossary(GlossaryResource $glossary): void
     {
         $this->glossary = $glossary;
-    }
-
-    /**
-     * Get all object groups
-     *
-     * @return ObjectStorage<ObjectGroup>
-     */
-    public function getAllObjectGroups(): ?ObjectStorage
-    {
-        return $this->allObjectGroups;
-    }
-
-    /**
-     * Set all object groups
-     *
-     * @param ObjectStorage<ObjectGroup> $allObjectGroups
-     */
-    public function setAllObjectGroups(ObjectStorage $allObjectGroups): void
-    {
-        $this->allObjectGroups = $allObjectGroups;
-    }
-
-    /**
-     * Add all object groups
-     *
-     * @param ObjectGroup $allObjectGroups
-     */
-    public function addAllObjectGroups(ObjectGroup $allObjectGroups): void
-    {
-        $this->allObjectGroups?->attach($allObjectGroups);
-    }
-
-    /**
-     * Remove all object groups
-     *
-     * @param ObjectGroup $allObjectGroups
-     */
-    public function removeAllObjectGroups(ObjectGroup $allObjectGroups): void
-    {
-        $this->allObjectGroups?->detach($allObjectGroups);
-    }
-
-    /**
-     * Remove all all object groups
-     */
-    public function removeAllAllObjectGroups(): void
-    {
-        $allObjectGroups = clone $this->allObjectGroups;
-        $this->allObjectGroups->removeAll($allObjectGroups);
     }
 
     /**
@@ -196,5 +147,54 @@ class ObjectResource extends AbstractResource
     {
         $allSingleObjects = clone $this->allSingleObjects;
         $this->allSingleObjects->removeAll($allSingleObjects);
+    }
+
+    /**
+     * Get all object groups
+     *
+     * @return ObjectStorage<ObjectGroup>
+     */
+    public function getAllObjectGroups(): ?ObjectStorage
+    {
+        return $this->allObjectGroups;
+    }
+
+    /**
+     * Set all object groups
+     *
+     * @param ObjectStorage<ObjectGroup> $allObjectGroups
+     */
+    public function setAllObjectGroups(ObjectStorage $allObjectGroups): void
+    {
+        $this->allObjectGroups = $allObjectGroups;
+    }
+
+    /**
+     * Add all object groups
+     *
+     * @param ObjectGroup $allObjectGroups
+     */
+    public function addAllObjectGroups(ObjectGroup $allObjectGroups): void
+    {
+        $this->allObjectGroups?->attach($allObjectGroups);
+    }
+
+    /**
+     * Remove all object groups
+     *
+     * @param ObjectGroup $allObjectGroups
+     */
+    public function removeAllObjectGroups(ObjectGroup $allObjectGroups): void
+    {
+        $this->allObjectGroups?->detach($allObjectGroups);
+    }
+
+    /**
+     * Remove all all object groups
+     */
+    public function removeAllAllObjectGroups(): void
+    {
+        $allObjectGroups = clone $this->allObjectGroups;
+        $this->allObjectGroups->removeAll($allObjectGroups);
     }
 }

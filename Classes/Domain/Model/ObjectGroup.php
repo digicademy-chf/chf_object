@@ -31,14 +31,14 @@ class ObjectGroup extends AbstractObject
     /**
      * Construct object
      *
+     * @param string $name
      * @param object $parentResource
      * @param string $uuid
-     * @param string $name
      * @return ObjectGroup
      */
-    public function __construct(object $parentResource, string $uuid, string $name)
+    public function __construct(string $name, object $parentResource, string $uuid)
     {
-        parent::__construct($parentResource, $uuid, $name);
+        parent::__construct($name, $parentResource, $uuid);
     }
 
     /**

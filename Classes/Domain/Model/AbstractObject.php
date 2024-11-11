@@ -17,6 +17,7 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use Digicademy\CHFBase\Domain\Model\AbstractHeritage;
 use Digicademy\CHFBase\Domain\Model\AgentRelation;
 use Digicademy\CHFBase\Domain\Model\Extent;
+use Digicademy\CHFBase\Domain\Model\Location;
 use Digicademy\CHFBase\Domain\Model\LocationRelation;
 use Digicademy\CHFBase\Domain\Model\Period;
 use Digicademy\CHFMap\Domain\Model\Feature;
@@ -56,7 +57,7 @@ class AbstractObject extends AbstractHeritage
     protected string $alternativeName = '';
 
     /**
-     * List of extents and identifiers relevant to this entry
+     * List of extents relevant to this entry
      * 
      * @var ?ObjectStorage<Extent>
      */
@@ -67,17 +68,7 @@ class AbstractObject extends AbstractHeritage
     protected ?ObjectStorage $extent = null;
 
     /**
-     * Marks this object or object group as historical
-     * 
-     * @var bool
-     */
-    #[Validate([
-        'validator' => 'Boolean',
-    ])]
-    protected bool $isHistorical = false;
-
-    /**
-     * Feature to use as geodata of this single object or object group
+     * Feature to use as geodata of this object (group)
      * 
      * @var Feature|FeatureCollection|LazyLoadingProxy|null
      */
@@ -104,7 +95,7 @@ class AbstractObject extends AbstractHeritage
     protected ?ObjectStorage $event = null;
 
     /**
-     * Agent of this database record described by a relation
+     * Agent related to this record
      * 
      * @var ?ObjectStorage<AgentRelation>
      */
@@ -115,7 +106,7 @@ class AbstractObject extends AbstractHeritage
     protected ?ObjectStorage $agentRelation = null;
 
     /**
-     * Location of this database record described by a relation
+     * Location related to this record
      * 
      * @var ?ObjectStorage<LocationRelation>
      */
@@ -126,14 +117,32 @@ class AbstractObject extends AbstractHeritage
     protected ?ObjectStorage $locationRelation = null;
 
     /**
+     * Place that this object (group) is part of
+     * 
+     * @var bool
+     */
+    #[Validate([
+        'validator' => 'Boolean',
+    ])]
+    protected bool $isHistorical = false;
+
+    /**
+     * Place that this record is part of
+     * 
+     * @var Location|LazyLoadingProxy|null
+     */
+    #[Lazy()]
+    protected Location|LazyLoadingProxy|null $parentLocation = null;
+
+    /**
      * Construct object
      *
+     * @param string $name
      * @param object $parentResource
      * @param string $uuid
-     * @param string $name
      * @return AbstractObject
      */
-    public function __construct(object $parentResource, string $uuid, string $name)
+    public function __construct(string $name, object $parentResource, string $uuid)
     {
         parent::__construct($parentResource, $uuid);
         $this->initializeObject();
@@ -240,26 +249,6 @@ class AbstractObject extends AbstractHeritage
     {
         $extent = clone $this->extent;
         $this->extent->removeAll($extent);
-    }
-
-    /**
-     * Get is historical
-     *
-     * @return bool
-     */
-    public function getIsHistorical(): bool
-    {
-        return $this->isHistorical;
-    }
-
-    /**
-     * Set is historical
-     *
-     * @param bool $isHistorical
-     */
-    public function setIsHistorical(bool $isHistorical): void
-    {
-        $this->isHistorical = $isHistorical;
     }
 
     /**
@@ -479,5 +468,48 @@ class AbstractObject extends AbstractHeritage
     {
         $locationRelation = clone $this->locationRelation;
         $this->locationRelation->removeAll($locationRelation);
+    }
+
+    /**
+     * Get is historical
+     *
+     * @return bool
+     */
+    public function getIsHistorical(): bool
+    {
+        return $this->isHistorical;
+    }
+
+    /**
+     * Set is historical
+     *
+     * @param bool $isHistorical
+     */
+    public function setIsHistorical(bool $isHistorical): void
+    {
+        $this->isHistorical = $isHistorical;
+    }
+
+    /**
+     * Get parent location
+     * 
+     * @return Location
+     */
+    public function getParentLocation(): Location
+    {
+        if ($this->parentLocation instanceof LazyLoadingProxy) {
+            $this->parentLocation->_loadRealInstance();
+        }
+        return $this->parentLocation;
+    }
+
+    /**
+     * Set parent location
+     * 
+     * @param Location
+     */
+    public function setParentLocation(Location $parentLocation): void
+    {
+        $this->parentLocation = $parentLocation;
     }
 }

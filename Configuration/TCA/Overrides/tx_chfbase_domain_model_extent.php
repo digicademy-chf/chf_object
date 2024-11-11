@@ -18,8 +18,6 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Please also add new items in this list to the overwriteChildTca in tx_chfobject_domain_model_single_object and tx_chfobject_domain_model_object_group
-
 // Add select item group 'chfObject'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItemGroup('tx_chfbase_domain_model_extent', 'type',
     'chfObject',

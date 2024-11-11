@@ -22,6 +22,17 @@ defined('TYPO3') or die();
 class SingleObject extends AbstractObject
 {
     /**
+     * Schematic related to the first media file
+     * 
+     * @var FileReference|LazyLoadingProxy|null
+     */
+    #[Lazy()]
+    #[Cascade([
+        'value' => 'remove',
+    ])]
+    protected FileReference|LazyLoadingProxy|null $mediaSchema = null;
+
+    /**
      * Object group that this single object is part of
      * 
      * @var ObjectGroup|LazyLoadingProxy|null
@@ -38,27 +49,39 @@ class SingleObject extends AbstractObject
     protected SingleObject|LazyLoadingProxy|null $parentSingleObject = null;
 
     /**
-     * Schematic related to the first media file
-     * 
-     * @var FileReference|LazyLoadingProxy|null
-     */
-    #[Lazy()]
-    #[Cascade([
-        'value' => 'remove',
-    ])]
-    protected FileReference|LazyLoadingProxy|null $mediaSchema = null;
-
-    /**
      * Construct object
      *
+     * @param string $name
      * @param object $parentResource
      * @param string $uuid
-     * @param string $name
      * @return SingleObject
      */
-    public function __construct(object $parentResource, string $uuid, string $name)
+    public function __construct(string $name, object $parentResource, string $uuid)
     {
-        parent::__construct($parentResource, $uuid, $name);
+        parent::__construct($name, $parentResource, $uuid);
+    }
+
+    /**
+     * Get media schema
+     * 
+     * @return FileReference
+     */
+    public function getMediaSchema(): FileReference
+    {
+        if ($this->mediaSchema instanceof LazyLoadingProxy) {
+            $this->mediaSchema->_loadRealInstance();
+        }
+        return $this->mediaSchema;
+    }
+
+    /**
+     * Set media schema
+     * 
+     * @param FileReference
+     */
+    public function setMediaSchema(FileReference $mediaSchema): void
+    {
+        $this->mediaSchema = $mediaSchema;
     }
 
     /**
@@ -105,28 +128,5 @@ class SingleObject extends AbstractObject
     public function setParentSingleObject(SingleObject $parentSingleObject): void
     {
         $this->parentSingleObject = $parentSingleObject;
-    }
-
-    /**
-     * Get media schema
-     * 
-     * @return FileReference
-     */
-    public function getMediaSchema(): FileReference
-    {
-        if ($this->mediaSchema instanceof LazyLoadingProxy) {
-            $this->mediaSchema->_loadRealInstance();
-        }
-        return $this->mediaSchema;
-    }
-
-    /**
-     * Set media schema
-     * 
-     * @param FileReference
-     */
-    public function setMediaSchema(FileReference $mediaSchema): void
-    {
-        $this->mediaSchema = $mediaSchema;
     }
 }
