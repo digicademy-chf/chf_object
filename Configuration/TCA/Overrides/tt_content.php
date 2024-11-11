@@ -7,6 +7,8 @@ declare(strict_types=1);
 # LICENSE.txt file that was distributed with this source code.
 
 
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+
 defined('TYPO3') or die();
 
 /**
@@ -19,7 +21,7 @@ defined('TYPO3') or die();
  */
 
 // Add plugin 'ObjectGallery'
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+ExtensionUtility::registerPlugin(
     'CHFObject',
     'ObjectGallery',
     'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.objectGallery',
@@ -29,7 +31,7 @@ defined('TYPO3') or die();
 );
 
 // Add plugin 'ObjectContext'
-\TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+ExtensionUtility::registerPlugin(
     'CHFObject',
     'ObjectContext',
     'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.objectContext',
