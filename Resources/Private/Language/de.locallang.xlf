@@ -175,20 +175,20 @@
                 <target>Raum für zu diesem Ort gehörige Objektgruppen</target>
             </trans-unit>
             <!-- Plugin: ObjectGallery -->
-            <trans-unit id="plugin.objectGallery" resname="plugin.objectGallery" approved="yes">
-                <source>Object gallery</source>
-                <target>Objektgalerie</target>
+            <trans-unit id="plugin.gallery" resname="plugin.gallery" approved="yes">
+                <source>Gallery</source>
+                <target>Galerie</target>
             </trans-unit>
-            <trans-unit id="plugin.objectGallery.description" resname="plugin.objectGallery.description" approved="yes">
-                <source>List and individual object view</source>
-                <target>Liste und Einzelanzeige von Objekten</target>
+            <trans-unit id="plugin.gallery.description" resname="plugin.gallery.description" approved="yes">
+                <source>List and view objects and images</source>
+                <target>Liste und Anzeige von Objekten und Bildern</target>
             </trans-unit>
-            <!-- Plugin: ObjectContext -->
-            <trans-unit id="plugin.objectContext" resname="plugin.objectContext" approved="yes">
-                <source>Object context</source>
-                <target>Objektkontext</target>
+            <!-- Plugin: Context -->
+            <trans-unit id="plugin.context" resname="plugin.context" approved="yes">
+                <source>Context</source>
+                <target>Kontext</target>
             </trans-unit>
-            <trans-unit id="plugin.objectContext.description" resname="plugin.objectContext.description" approved="yes">
+            <trans-unit id="plugin.context.description" resname="plugin.context.description" approved="yes">
                 <source>View objects by location, date, and agent</source>
                 <target>Objektanzeige nach Ort, Zeit und Akteur:innen</target>
             </trans-unit>

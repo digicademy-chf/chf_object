@@ -133,18 +133,18 @@
             <trans-unit id="object.location.objectGroup.description" resname="object.location.objectGroup.description">
                 <source>Room to list object groups as part of this location</source>
             </trans-unit>
-            <!-- Plugin: ObjectGallery -->
-            <trans-unit id="plugin.objectGallery" resname="plugin.objectGallery">
-                <source>Object gallery</source>
+            <!-- Plugin: Gallery -->
+            <trans-unit id="plugin.gallery" resname="plugin.gallery">
+                <source>Gallery</source>
             </trans-unit>
-            <trans-unit id="plugin.objectGallery.description" resname="plugin.objectGallery.description">
-                <source>List and individual object view</source>
+            <trans-unit id="plugin.gallery.description" resname="plugin.gallery.description">
+                <source>List and view objects and images</source>
             </trans-unit>
-            <!-- Plugin: ObjectContext -->
-            <trans-unit id="plugin.objectContext" resname="plugin.objectContext">
-                <source>Object context</source>
+            <!-- Plugin: Context -->
+            <trans-unit id="plugin.context" resname="plugin.context">
+                <source>Context</source>
             </trans-unit>
-            <trans-unit id="plugin.objectContext.description" resname="plugin.objectContext.description">
+            <trans-unit id="plugin.context.description" resname="plugin.context.description">
                 <source>View objects by location, date, and agent</source>
             </trans-unit>
         </body>

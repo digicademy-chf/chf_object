@@ -13,20 +13,20 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') or die();
 
-// Register 'ObjectGallery' content element
+// Register 'Gallery' content element
 ExtensionUtility::configurePlugin(
     'CHFObject',
-    'ObjectGallery',
+    'Gallery',
     [
         SingleObjectController::class => 'index',
         SingleObjectController::class => 'show',
     ],
 );
 
-// Register 'ObjectContext' content element
+// Register 'Context' content element
 ExtensionUtility::configurePlugin(
     'CHFObject',
-    'ObjectContext',
+    'Context',
     [
         ObjectGroupController::class => 'index',
         ObjectGroupController::class => 'show',

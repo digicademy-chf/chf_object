@@ -26,12 +26,12 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:chf_object/Resources/Public/Icons/TableObjectGroup.svg',
     ],
-    'tx-chfobject-plugin-object-gallery' => [
+    'tx-chfobject-plugin-gallery' => [
         'provider' => SvgIconProvider::class,
-        'source' => 'EXT:chf_object/Resources/Public/Icons/PluginObjectGallery.svg',
+        'source' => 'EXT:chf_object/Resources/Public/Icons/PluginGallery.svg',
     ],
-    'tx-chfobject-plugin-object-context' => [
+    'tx-chfobject-plugin-context' => [
         'provider' => SvgIconProvider::class,
-        'source' => 'EXT:chf_object/Resources/Public/Icons/PluginObjectContext.svg',
+        'source' => 'EXT:chf_object/Resources/Public/Icons/PluginContext.svg',
     ],
 ];

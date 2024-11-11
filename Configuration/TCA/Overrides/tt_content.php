@@ -20,22 +20,22 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add plugin 'ObjectGallery'
+// Add plugin 'Gallery'
 ExtensionUtility::registerPlugin(
     'CHFObject',
-    'ObjectGallery',
-    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.objectGallery',
-    'tx-chfobject-plugin-object-gallery',
+    'Gallery',
+    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.gallery',
+    'tx-chfobject-plugin-gallery',
     'heritage',
-    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.objectGallery.description',
+    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.gallery.description',
 );
 
-// Add plugin 'ObjectContext'
+// Add plugin 'Context'
 ExtensionUtility::registerPlugin(
     'CHFObject',
-    'ObjectContext',
-    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.objectContext',
-    'tx-chfobject-plugin-object-context',
+    'Context',
+    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.context',
+    'tx-chfobject-plugin-context',
     'heritage',
-    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.objectContext.description',
+    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.context.description',
 );
