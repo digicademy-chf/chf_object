@@ -18,9 +18,10 @@ ExtensionUtility::configurePlugin(
     'CHFObject',
     'Gallery',
     [
-        SingleObjectController::class => 'index',
-        SingleObjectController::class => 'show',
+        SingleObjectController::class => 'index, show',
     ],
+    [], // None of the actions are non-cacheable
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
 // Register 'Context' content element
@@ -28,9 +29,9 @@ ExtensionUtility::configurePlugin(
     'CHFObject',
     'Context',
     [
-        ObjectGroupController::class => 'index',
-        ObjectGroupController::class => 'show',
-        SingleObjectController::class => 'index',
-        SingleObjectController::class => 'show',
+        ObjectGroupController::class => 'index, show',
+        SingleObjectController::class => 'index, show',
     ],
+    [], // None of the actions are non-cacheable
+    ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
