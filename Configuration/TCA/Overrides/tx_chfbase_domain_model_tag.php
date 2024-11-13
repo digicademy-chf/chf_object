@@ -18,10 +18,10 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add columns 'asLabelOfSingleObject' and 'asLabelOfObjectGroup'
+// Add columns 'as_label_of_single_object' and 'as_label_of_object_group'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfbase_domain_model_tag',
     [
-        'asLabelOfSingleObject' => [
+        'as_label_of_single_object' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.labelTag.asLabelOfSingleObject',
@@ -38,7 +38,7 @@ defined('TYPO3') or die();
                 'autoSizeMax' => 10,
             ],
         ],
-        'asLabelOfObjectGroup' => [
+        'as_label_of_object_group' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.labelTag.asLabelOfObjectGroup',

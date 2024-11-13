@@ -18,7 +18,7 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add column 'object'
+// Add columns 'object' and 'object_group'
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfbase_domain_model_location',
     [
         'object' => [
@@ -29,7 +29,7 @@ defined('TYPO3') or die();
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => 'tx_chfobject_domain_model_single_object',
-                'foreign_field' => 'parentLocation',
+                'foreign_field' => 'parent_location',
                 'enableCascadingDelete' => false,
                 'appearance' => [
                     'collapseAll' => true,
@@ -43,7 +43,7 @@ defined('TYPO3') or die();
                 ],
             ],
         ],
-        'objectGroup' => [
+        'object_group' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
             'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.location.objectGroup',
@@ -51,7 +51,7 @@ defined('TYPO3') or die();
             'config' => [
                 'type' => 'inline',
                 'foreign_table' => 'tx_chfobject_domain_model_object_group',
-                'foreign_field' => 'parentLocation',
+                'foreign_field' => 'parent_location',
                 'enableCascadingDelete' => false,
                 'appearance' => [
                     'collapseAll' => true,
