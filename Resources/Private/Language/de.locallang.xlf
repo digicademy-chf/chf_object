@@ -71,7 +71,7 @@
             </trans-unit>
             <trans-unit id="object.abstractObject.parentLocation.description" resname="object.abstractObject.parentLocation.description" approved="yes">
                 <source>Place that this object (group) is part of</source>
-                <target>Ortsangabe, zu der diese:s Objekt(gruppe) gehört</target>
+                <target>Ortsangabe, zu der dieses Objekt gehört</target>
             </trans-unit>
             <!-- Object: SingleObject -->
             <trans-unit id="object.singleObject" resname="object.singleObject" approved="yes">
