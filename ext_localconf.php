@@ -13,10 +13,10 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') or die();
 
-// Register 'Gallery' content element
+// Register 'Exhibition' content element
 ExtensionUtility::configurePlugin(
     'CHFObject',
-    'Gallery',
+    'Exhibition',
     [
         SingleObjectController::class => 'index, show',
     ],

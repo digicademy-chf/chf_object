@@ -133,11 +133,11 @@
             <trans-unit id="object.location.objectGroup.description" resname="object.location.objectGroup.description">
                 <source>Room to list object groups as part of this location</source>
             </trans-unit>
-            <!-- Plugin: Gallery -->
-            <trans-unit id="plugin.gallery" resname="plugin.gallery">
-                <source>Gallery</source>
+            <!-- Plugin: Exhibition -->
+            <trans-unit id="plugin.exhibition" resname="plugin.exhibition">
+                <source>Exhibition</source>
             </trans-unit>
-            <trans-unit id="plugin.gallery.description" resname="plugin.gallery.description">
+            <trans-unit id="plugin.exhibition.description" resname="plugin.exhibition.description">
                 <source>List and view objects and images</source>
             </trans-unit>
             <!-- Plugin: Context -->

@@ -20,14 +20,14 @@ defined('TYPO3') or die();
  * https://docs.typo3.org/m/typo3/reference-tca/main/en-us/.
  */
 
-// Add plugin 'Gallery'
+// Add plugin 'Exhibition'
 ExtensionUtility::registerPlugin(
     'CHFObject',
-    'Gallery',
-    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.gallery',
-    'tx-chfobject-plugin-gallery',
+    'Exhibition',
+    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.exhibition',
+    'tx-chfobject-plugin-exhibition',
     'heritage',
-    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.gallery.description',
+    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.exhibition.description',
 );
 
 // Add plugin 'Context'

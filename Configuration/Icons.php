@@ -26,9 +26,9 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:chf_object/Resources/Public/Icons/TableObjectGroup.svg',
     ],
-    'tx-chfobject-plugin-gallery' => [
+    'tx-chfobject-plugin-exhibition' => [
         'provider' => SvgIconProvider::class,
-        'source' => 'EXT:chf_object/Resources/Public/Icons/PluginGallery.svg',
+        'source' => 'EXT:chf_object/Resources/Public/Icons/PluginExhibition.svg',
     ],
     'tx-chfobject-plugin-context' => [
         'provider' => SvgIconProvider::class,

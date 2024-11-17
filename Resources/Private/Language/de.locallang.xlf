@@ -174,12 +174,12 @@
                 <source>Room to list object groups as part of this location</source>
                 <target>Raum für zu diesem Ort gehörige Objektgruppen</target>
             </trans-unit>
-            <!-- Plugin: ObjectGallery -->
-            <trans-unit id="plugin.gallery" resname="plugin.gallery" approved="yes">
-                <source>Gallery</source>
-                <target>Galerie</target>
+            <!-- Plugin: Exhibition -->
+            <trans-unit id="plugin.exhibition" resname="plugin.exhibition" approved="yes">
+                <source>Exhibition</source>
+                <target>Ausstellung</target>
             </trans-unit>
-            <trans-unit id="plugin.gallery.description" resname="plugin.gallery.description" approved="yes">
+            <trans-unit id="plugin.exhibition.description" resname="plugin.exhibition.description" approved="yes">
                 <source>List and view objects and images</source>
                 <target>Liste und Anzeige von Objekten und Bildern</target>
             </trans-unit>
