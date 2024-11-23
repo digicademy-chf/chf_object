@@ -25,4 +25,8 @@ return [
             'objectResource' => Digicademy\CHFObject\Domain\Model\ObjectResource::class,
         ],
     ],
+    Digicademy\CHFObject\Domain\Model\ObjectResource::class => [
+        'tableName' => 'tx_chfbase_domain_model_resource',
+        'recordType' => 'objectResource',
+    ],
 ];

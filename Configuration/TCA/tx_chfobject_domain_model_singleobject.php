@@ -10,7 +10,7 @@ declare(strict_types=1);
 defined('TYPO3') or die();
 
 /**
- * ObjectGroup and its properties
+ * SingleObject and its properties
  * 
  * Configuration of a database table and its editing interface in the
  * TYPO3 backend. This also serves as the basis for the Extbase
@@ -19,7 +19,7 @@ defined('TYPO3') or die();
  */
 return [
     'ctrl' => [
-        'title'                    => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.objectGroup',
+        'title'                    => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.singleObject',
         'label'                    => 'name',
         'label_alt'                => 'alternative_name',
         'descriptionColumn'        => 'editorial_note',
@@ -29,7 +29,7 @@ return [
         'sortby'                   => 'sorting',
         'default_sortby'           => 'is_highlight ASC,name ASC,alternative_name ASC',
         'versioningWS'             => true,
-        'iconfile'                 => 'EXT:chf_object/Resources/Public/Icons/TableObjectGroup.svg',
+        'iconfile'                 => 'EXT:chf_object/Resources/Public/Icons/TableSingleObject.svg',
         'origUid'                  => 't3_origuid',
         'hideAtCopy'               => true,
         'languageField'            => 'sys_language_uid',
@@ -92,9 +92,9 @@ return [
                         'value' => 0,
                     ],
                 ],
-                'foreign_table' => 'tx_chfobject_domain_model_object_group',
-                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_object_group}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_chfobject_domain_model_object_group}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table' => 'tx_chfobject_domain_model_singleobject',
+                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_singleobject}.{#pid}=###CURRENT_PID###'
+                    . ' AND {#tx_chfobject_domain_model_singleobject}.{#sys_language_uid} IN (-1,0)',
                 'default' => 0,
             ],
         ],
@@ -214,7 +214,7 @@ return [
                 'foreign_table' => 'tx_chfbase_domain_model_tag',
                 'foreign_table_where' => 'AND {#tx_chfbase_domain_model_tag}.{#pid}=###CURRENT_PID###'
                     . ' AND {#tx_chfbase_domain_model_tag}.{#type}=\'labelTag\'',
-                'MM' => 'tx_chfobject_domain_model_object_group_tag_label_mm',
+                'MM' => 'tx_chfobject_domain_model_singleobject_tag_label_mm',
                 'multiple' => 1,
                 'treeConfig' => [
                     'parentField' => 'parent_label_tag',
@@ -233,8 +233,8 @@ return [
             'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.abstractObject.object.description',
             'config' => [
                 'type' => 'inline',
-                'foreign_table' => 'tx_chfobject_domain_model_single_object',
-                'foreign_field' => 'parent_object_group',
+                'foreign_table' => 'tx_chfobject_domain_model_singleobject',
+                'foreign_field' => 'parent_single_object',
                 'enableCascadingDelete' => false,
                 'appearance' => [
                     'collapseAll' => true,
@@ -280,7 +280,7 @@ return [
                 'foreign_table' => 'tx_chfbase_domain_model_relation',
                 'MM' => 'tx_chfbase_domain_model_relation_any_record_mm',
                 'MM_match_fields' => [
-                    'tablenames' => 'tx_chfobject_domain_model_object_group',
+                    'tablenames' => 'tx_chfobject_domain_model_singleobject',
                     'fieldname' => 'agent_relation',
                 ],
                 'MM_opposite_field' => 'record',
@@ -322,7 +322,7 @@ return [
                 'foreign_table' => 'tx_chfbase_domain_model_relation',
                 'MM' => 'tx_chfbase_domain_model_relation_any_record_mm',
                 'MM_match_fields' => [
-                    'tablenames' => 'tx_chfobject_domain_model_object_group',
+                    'tablenames' => 'tx_chfobject_domain_model_singleobject',
                     'fieldname' => 'location_relation',
                 ],
                 'MM_opposite_field' => 'record',
@@ -347,7 +347,7 @@ return [
                         ],
                         'role' => [
                             'config' => [
-                                'default' => 'genericLocation',
+                                'default' => 'formerLocation',
                             ],
                         ],
                     ],
@@ -408,6 +408,17 @@ return [
                 'allowed' => 'common-media-types',
             ],
         ],
+        'media_schema' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.singleObject.mediaSchema',
+            'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.singleObject.mediaSchema.description',
+            'config' => [
+                'type' => 'file',
+                'allowed' => 'common-media-types',
+                'maxitems' => 1,
+            ],
+        ],
         'file' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -427,7 +438,7 @@ return [
                 'foreign_table' => 'tx_chfbase_domain_model_relation',
                 'MM' => 'tx_chfbase_domain_model_relation_any_record_mm',
                 'MM_match_fields' => [
-                    'tablenames' => 'tx_chfobject_domain_model_object_group',
+                    'tablenames' => 'tx_chfobject_domain_model_singleobject',
                     'fieldname' => 'link_relation',
                 ],
                 'MM_opposite_field' => 'record',
@@ -520,6 +531,48 @@ return [
                 ],
             ],
         ],
+        'parent_object_group' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.singleObject.parentObjectGroup',
+            'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.singleObject.parentObjectGroup.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [
+                        'label' => '',
+                        'value' => 0,
+                    ],
+                ],
+                'foreign_table' => 'tx_chfobject_domain_model_objectgroup',
+                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_objectgroup}.{#pid}=###CURRENT_PID###',
+                'sortItems' => [
+                    'label' => 'asc',
+                ],
+            ],
+        ],
+        'parent_single_object' => [
+            'exclude' => true,
+            'l10n_mode' => 'exclude',
+            'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.singleObject.parentSingleObject',
+            'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.singleObject.parentSingleObject.description',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectTree',
+                'foreign_table' => 'tx_chfobject_domain_model_singleobject',
+                'foreign_table_where' => 'AND {#tx_chfobject_domain_model_singleobject}.{#pid}=###CURRENT_PID###',
+                'treeConfig' => [
+                    'parentField' => 'parent_single_object',
+                    'appearance' => [
+                        'showHeader' => true,
+                        'expandAll' => true,
+                    ],
+                ],
+                'maxitems' => 1,
+                'size' => 8,
+            ],
+        ],
         'parent_resource' => [
             'exclude' => true,
             'l10n_mode' => 'exclude',
@@ -555,7 +608,7 @@ return [
             'description' => 'LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.sameAs.description',
             'config' => [
                 'type' => 'inline',
-                'foreign_table' => 'tx_chfbase_domain_model_same_as',
+                'foreign_table' => 'tx_chfbase_domain_model_sameas',
                 'foreign_field' => 'parent',
                 'foreign_table_field' => 'parent_table',
                 'appearance' => [
@@ -632,7 +685,7 @@ return [
                 'foreign_table' => 'tx_chfbase_domain_model_relation',
                 'MM' => 'tx_chfbase_domain_model_relation_any_record_mm',
                 'MM_match_fields' => [
-                    'tablenames' => 'tx_chfobject_domain_model_object_group',
+                    'tablenames' => 'tx_chfobject_domain_model_singleobject',
                     'fieldname' => 'authorship_relation',
                 ],
                 'MM_opposite_field' => 'record',
@@ -674,7 +727,7 @@ return [
                 'foreign_table' => 'tx_chfbase_domain_model_relation',
                 'MM' => 'tx_chfbase_domain_model_relation_any_record_mm',
                 'MM_match_fields' => [
-                    'tablenames' => 'tx_chfobject_domain_model_object_group',
+                    'tablenames' => 'tx_chfobject_domain_model_singleobject',
                     'fieldname' => 'licence_relation',
                 ],
                 'MM_opposite_field' => 'record',
@@ -808,17 +861,14 @@ return [
         'nameAlternativeName' => [
             'showitem' => 'name,alternative_name,',
         ],
-        'geodataFloorPlan' => [
-            'showitem' => 'geodata,floor_plan,',
-        ],
         'eventAgentRelationLocationRelation' => [
             'showitem' => 'event,--linebreak--,agent_relation,--linebreak--,location_relation,',
         ],
         'contentElementFootnote' => [
             'showitem' => 'content_element,--linebreak--,footnote,',
         ],
-        'mediaFile' => [
-            'showitem' => 'media,--linebreak--,file,',
+        'mediaMediaSchemaFile' => [
+            'showitem' => 'media,--linebreak--,media_schema,--linebreak--,file,',
         ],
         'sourceRelationLinkRelation' => [
             'showitem' => 'source_relation,--linebreak--,link_relation,',
@@ -826,11 +876,11 @@ return [
         'isTeaserIsHighlightIsHistorical' => [
             'showitem' => 'is_teaser,is_highlight,is_historical,',
         ],
-        'parentLocationParentResource' => [
-            'showitem' => 'parent_location,parent_resource',
+        'parentLocationParentObjectGroupParentSingleObjectParentResource' => [
+            'showitem' => 'parent_location,parent_object_group,--linebreak--,parent_single_object,parent_resource,',
         ],
         'iriUuidSameAs' => [
-            'showitem' => 'iri,uuid,--linebreak--,same_as',
+            'showitem' => 'iri,uuid,--linebreak--,same_as,',
         ],
         'publicationDateRevisionDateRevisionNumberEditorialNote' => [
             'showitem' => 'publication_date,revision_date,revision_number,--linebreak--,editorial_note,',
@@ -848,10 +898,10 @@ return [
     'types' => [
         '0' => [
             'showitem' => '--palette--;;nameAlternativeName,extent,label,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,--palette--;;geodataFloorPlan,object,--palette--;;eventAgentRelationLocationRelation,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.unstructured,--palette--;;contentElementFootnote,--palette--;;mediaFile,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,geodata,object,--palette--;;eventAgentRelationLocationRelation,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.unstructured,--palette--;;contentElementFootnote,--palette--;;mediaMediaSchemaFile,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publication_relation,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlightIsHistorical,--palette--;;parentLocationParentResource,--palette--;;iriUuidSameAs,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlightIsHistorical,--palette--;;parentLocationParentObjectGroupParentSingleObjectParentResource,--palette--;;iriUuidSameAs,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,--palette--;;editorialStepsPublicationSteps,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImport,',
         ],

@@ -28,7 +28,7 @@ defined('TYPO3') or die();
             'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.location.object.description',
             'config' => [
                 'type' => 'inline',
-                'foreign_table' => 'tx_chfobject_domain_model_single_object',
+                'foreign_table' => 'tx_chfobject_domain_model_singleobject',
                 'foreign_field' => 'parent_location',
                 'enableCascadingDelete' => false,
                 'appearance' => [
@@ -50,7 +50,7 @@ defined('TYPO3') or die();
             'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.location.objectGroup.description',
             'config' => [
                 'type' => 'inline',
-                'foreign_table' => 'tx_chfobject_domain_model_object_group',
+                'foreign_table' => 'tx_chfobject_domain_model_objectgroup',
                 'foreign_field' => 'parent_location',
                 'enableCascadingDelete' => false,
                 'appearance' => [

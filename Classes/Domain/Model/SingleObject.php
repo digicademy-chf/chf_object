@@ -52,11 +52,11 @@ class SingleObject extends AbstractObject
      * Construct object
      *
      * @param string $name
-     * @param object $parentResource
+     * @param ObjectResource $parentResource
      * @param string $uuid
      * @return SingleObject
      */
-    public function __construct(string $name, object $parentResource, string $uuid)
+    public function __construct(string $name, ObjectResource $parentResource, string $uuid)
     {
         parent::__construct($name, $parentResource, $uuid);
     }
