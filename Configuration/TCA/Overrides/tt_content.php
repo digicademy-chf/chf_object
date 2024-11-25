@@ -30,12 +30,12 @@ ExtensionUtility::registerPlugin(
     'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.exhibition.description',
 );
 
-// Add plugin 'Context'
+// Add plugin 'Space'
 ExtensionUtility::registerPlugin(
     'CHFObject',
-    'Context',
-    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.context',
-    'tx-chfobject-plugin-context',
+    'Space',
+    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.space',
+    'tx-chfobject-plugin-space',
     'heritage',
-    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.context.description',
+    'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.space.description',
 );

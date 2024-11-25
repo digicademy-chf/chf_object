@@ -138,14 +138,14 @@
                 <source>Exhibition</source>
             </trans-unit>
             <trans-unit id="plugin.exhibition.description" resname="plugin.exhibition.description">
-                <source>List and view objects and images</source>
+                <source>List and show single objects</source>
             </trans-unit>
-            <!-- Plugin: Context -->
-            <trans-unit id="plugin.context" resname="plugin.context">
-                <source>Context</source>
+            <!-- Plugin: Space -->
+            <trans-unit id="plugin.space" resname="plugin.space">
+                <source>Space</source>
             </trans-unit>
-            <trans-unit id="plugin.context.description" resname="plugin.context.description">
-                <source>View objects by location, date, and agent</source>
+            <trans-unit id="plugin.space.description" resname="plugin.space.description">
+                <source>List and show locations with objects</source>
             </trans-unit>
         </body>
     </file>

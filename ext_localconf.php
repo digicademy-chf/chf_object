@@ -7,8 +7,8 @@ declare(strict_types=1);
 # LICENSE.txt file that was distributed with this source code.
 
 
-use Digicademy\CHFObject\Controller\ObjectGroupController;
-use Digicademy\CHFObject\Controller\SingleObjectController;
+use Digicademy\CHFObject\Controller\ExhibitionController;
+use Digicademy\CHFObject\Controller\SpaceController;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') or die();
@@ -18,19 +18,18 @@ ExtensionUtility::configurePlugin(
     'CHFObject',
     'Exhibition',
     [
-        SingleObjectController::class => 'index, show',
+        ExhibitionController::class => 'index, showSingle, showGroup',
     ],
     [], // None of the actions are non-cacheable
     ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
-// Register 'Context' content element
+// Register 'Space' content element
 ExtensionUtility::configurePlugin(
     'CHFObject',
-    'Context',
+    'Space',
     [
-        ObjectGroupController::class => 'index, show',
-        SingleObjectController::class => 'index, show',
+        SpaceController::class => 'index, show',
     ],
     [], // None of the actions are non-cacheable
     ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT

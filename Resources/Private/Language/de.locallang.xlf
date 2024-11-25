@@ -180,17 +180,17 @@
                 <target>Ausstellung</target>
             </trans-unit>
             <trans-unit id="plugin.exhibition.description" resname="plugin.exhibition.description" approved="yes">
-                <source>List and view objects and images</source>
-                <target>Liste und Anzeige von Objekten und Bildern</target>
+                <source>List and show single objects</source>
+                <target>Einzelobjekte auflisten und anzeigen</target>
             </trans-unit>
-            <!-- Plugin: Context -->
-            <trans-unit id="plugin.context" resname="plugin.context" approved="yes">
-                <source>Context</source>
-                <target>Kontext</target>
+            <!-- Plugin: Space -->
+            <trans-unit id="plugin.space" resname="plugin.space" approved="yes">
+                <source>Space</source>
+                <target>Raum</target>
             </trans-unit>
-            <trans-unit id="plugin.context.description" resname="plugin.context.description" approved="yes">
-                <source>View objects by location, date, and agent</source>
-                <target>Objektanzeige nach Ort, Zeit und Akteur:innen</target>
+            <trans-unit id="plugin.space.description" resname="plugin.space.description" approved="yes">
+                <source>List and show locations with objects</source>
+                <target>Orte mit Objekten auflisten und anzeigen</target>
             </trans-unit>
         </body>
     </file>
