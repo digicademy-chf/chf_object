@@ -20,7 +20,7 @@ use Digicademy\CHFBase\Domain\Model\Extent;
 use Digicademy\CHFBase\Domain\Model\Location;
 use Digicademy\CHFBase\Domain\Model\LocationRelation;
 use Digicademy\CHFBase\Domain\Model\Period;
-use Digicademy\CHFMap\Domain\Model\Feature;
+use Digicademy\CHFMap\Domain\Model\Coordinates;
 
 defined('TYPO3') or die();
 
@@ -67,12 +67,15 @@ class AbstractObject extends AbstractHeritage
     protected ?ObjectStorage $extent = null;
 
     /**
-     * Feature to use as geodata of this object (group)
+     * Geolocation of this object (group)
      * 
-     * @var Feature|LazyLoadingProxy|null
+     * @var ?ObjectStorage<Coordinates>
      */
     #[Lazy()]
-    protected Feature|LazyLoadingProxy|null $geodata = null;
+    #[Cascade([
+        'value' => 'remove',
+    ])]
+    protected ?ObjectStorage $coordinates = null;
 
     /**
      * Room to list contained single objects
@@ -155,6 +158,7 @@ class AbstractObject extends AbstractHeritage
     public function initializeObject(): void
     {
         $this->extent ??= new ObjectStorage();
+        $this->coordinates ??= new ObjectStorage();
         $this->object ??= new ObjectStorage();
         $this->event ??= new ObjectStorage();
         $this->agentRelation ??= new ObjectStorage();
@@ -251,26 +255,52 @@ class AbstractObject extends AbstractHeritage
     }
 
     /**
-     * Get geodata
-     * 
-     * @return Feature
+     * Get coordinates
+     *
+     * @return ObjectStorage<Coordinates>
      */
-    public function getGeodata(): Feature
+    public function getCoordinates(): ?ObjectStorage
     {
-        if ($this->geodata instanceof LazyLoadingProxy) {
-            $this->geodata->_loadRealInstance();
-        }
-        return $this->geodata;
+        return $this->coordinates;
     }
 
     /**
-     * Set geodata
-     * 
-     * @param Feature
+     * Set coordinates
+     *
+     * @param ObjectStorage<Coordinates> $coordinates
      */
-    public function setGeodata(Feature $geodata): void
+    public function setCoordinates(ObjectStorage $coordinates): void
     {
-        $this->geodata = $geodata;
+        $this->coordinates = $coordinates;
+    }
+
+    /**
+     * Add coordinates
+     *
+     * @param Coordinates $coordinates
+     */
+    public function addCoordinates(Coordinates $coordinates): void
+    {
+        $this->coordinates?->attach($coordinates);
+    }
+
+    /**
+     * Remove coordinates
+     *
+     * @param Coordinates $coordinates
+     */
+    public function removeCoordinates(Coordinates $coordinates): void
+    {
+        $this->coordinates?->detach($coordinates);
+    }
+
+    /**
+     * Remove all coordinates
+     */
+    public function removeAllCoordinates(): void
+    {
+        $coordinates = clone $this->coordinates;
+        $this->coordinates->removeAll($coordinates);
     }
 
     /**

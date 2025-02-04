@@ -9,9 +9,10 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFObject\Domain\Model;
 
+use TYPO3\CMS\Extbase\Domain\Model\FileReference;
+use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
 use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
-use Digicademy\CHFMap\Domain\Model\MapResource;
 
 defined('TYPO3') or die();
 
@@ -23,10 +24,13 @@ class ObjectGroup extends AbstractObject
     /**
      * Map of this object group
      * 
-     * @var MapResource|LazyLoadingProxy|null
+     * @var FileReference|LazyLoadingProxy|null
      */
     #[Lazy()]
-    protected MapResource|LazyLoadingProxy|null $floorPlan = null;
+    #[Cascade([
+        'value' => 'remove',
+    ])]
+    protected FileReference|LazyLoadingProxy|null $floorPlan = null;
 
     /**
      * Construct object
@@ -44,9 +48,9 @@ class ObjectGroup extends AbstractObject
     /**
      * Get floor plan
      * 
-     * @return MapResource
+     * @return FileReference
      */
-    public function getFloorPlan(): MapResource
+    public function getFloorPlan(): FileReference
     {
         if ($this->floorPlan instanceof LazyLoadingProxy) {
             $this->floorPlan->_loadRealInstance();
@@ -57,9 +61,9 @@ class ObjectGroup extends AbstractObject
     /**
      * Set floor plan
      * 
-     * @param MapResource
+     * @param FileReference
      */
-    public function setFloorPlan(MapResource $floorPlan): void
+    public function setFloorPlan(FileReference $floorPlan): void
     {
         $this->floorPlan = $floorPlan;
     }

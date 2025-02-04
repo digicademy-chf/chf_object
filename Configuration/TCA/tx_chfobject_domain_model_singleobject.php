@@ -898,7 +898,7 @@ return [
     'types' => [
         '0' => [
             'showitem' => '--palette--;;nameAlternativeName,extent,label,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,geodata,object,--palette--;;eventAgentRelationLocationRelation,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,coordinates,object,--palette--;;eventAgentRelationLocationRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.unstructured,--palette--;;contentElementFootnote,--palette--;;mediaMediaSchemaFile,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publication_relation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlightIsHistorical,--palette--;;parentLocationParentObjectGroupParentSingleObjectParentResource,--palette--;;iriUuidSameAs,

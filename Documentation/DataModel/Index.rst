@@ -13,9 +13,9 @@ All records of an object repository are held together by a single
 objects and includes the option to add, for example, image representations and
 schematics. A common serialisation for objects is the LIDO format.
 
-``Feature`` and ``MapResource`` may be used across the model to add geodata
-and image maps. ``Period`` objects are used to add object biographies.
-``Agent`` objects can be added in various roles via an ``AuthorshipRelation``.
+``Coordinates`` may be used across the model to add geodata. ``Period`` objects
+are used to add object biographies. ``Agent`` objects can be added in various
+roles via an ``AuthorshipRelation``.
 
 In addition, the model knows flexible ``LabelTag`` and ``SameAs`` classes,
 which can be used to group objects and other records via labels and to connect

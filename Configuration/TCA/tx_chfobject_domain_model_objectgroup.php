@@ -808,8 +808,8 @@ return [
         'nameAlternativeName' => [
             'showitem' => 'name,alternative_name,',
         ],
-        'geodataFloorPlan' => [
-            'showitem' => 'geodata,floor_plan,',
+        'coordinatesFloorPlan' => [
+            'showitem' => 'coordinates,--linebreak--,floor_plan,',
         ],
         'eventAgentRelationLocationRelation' => [
             'showitem' => 'event,--linebreak--,agent_relation,--linebreak--,location_relation,',
@@ -848,7 +848,7 @@ return [
     'types' => [
         '0' => [
             'showitem' => '--palette--;;nameAlternativeName,extent,label,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,--palette--;;geodataFloorPlan,object,--palette--;;eventAgentRelationLocationRelation,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,--palette--;;coordinatesFloorPlan,object,--palette--;;eventAgentRelationLocationRelation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.unstructured,--palette--;;contentElementFootnote,--palette--;;mediaFile,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publication_relation,
             --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlightIsHistorical,--palette--;;parentLocationParentResource,--palette--;;iriUuidSameAs,
