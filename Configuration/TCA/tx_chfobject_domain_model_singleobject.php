@@ -861,49 +861,31 @@ return [
         'nameAlternativeName' => [
             'showitem' => 'name,alternative_name,',
         ],
-        'eventAgentRelationLocationRelation' => [
-            'showitem' => 'event,--linebreak--,agent_relation,--linebreak--,location_relation,',
-        ],
-        'contentElementFootnote' => [
-            'showitem' => 'content_element,--linebreak--,footnote,',
-        ],
-        'mediaMediaSchemaFile' => [
-            'showitem' => 'media,--linebreak--,media_schema,--linebreak--,file,',
-        ],
-        'sourceRelationLinkRelation' => [
-            'showitem' => 'source_relation,--linebreak--,link_relation,',
-        ],
         'isTeaserIsHighlightIsHistorical' => [
             'showitem' => 'is_teaser,is_highlight,is_historical,',
         ],
         'parentLocationParentObjectGroupParentSingleObjectParentResource' => [
             'showitem' => 'parent_location,parent_object_group,--linebreak--,parent_single_object,parent_resource,',
         ],
-        'iriUuidSameAs' => [
-            'showitem' => 'iri,uuid,--linebreak--,same_as,',
+        'iriUuid' => [
+            'showitem' => 'iri,uuid,',
         ],
-        'publicationDateRevisionDateRevisionNumberEditorialNote' => [
-            'showitem' => 'publication_date,revision_date,revision_number,--linebreak--,editorial_note,',
-        ],
-        'authorshipRelationLicenceRelation' => [
-            'showitem' => 'authorship_relation,--linebreak--,licence_relation,',
+        'publicationDateRevisionDateRevisionNumber' => [
+            'showitem' => 'publication_date,revision_date,revision_number,',
         ],
         'editorialStepsPublicationSteps' => [
             'showitem' => 'editorial_steps,publication_steps,',
-        ],
-        'importOriginImport' => [
-            'showitem' => 'import_origin,--linebreak--,import,',
         ],
     ],
     'types' => [
         '0' => [
             'showitem' => '--palette--;;nameAlternativeName,extent,label,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,coordinates,object,--palette--;;eventAgentRelationLocationRelation,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.unstructured,--palette--;;contentElementFootnote,--palette--;;mediaMediaSchemaFile,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,--palette--;;sourceRelationLinkRelation,publication_relation,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlightIsHistorical,--palette--;;parentLocationParentObjectGroupParentSingleObjectParentResource,--palette--;;iriUuidSameAs,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumberEditorialNote,--palette--;;authorshipRelationLicenceRelation,--palette--;;editorialStepsPublicationSteps,
-            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,--palette--;;importOriginImport,',
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,coordinates,object,event,agent_relation,location_relation,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.unstructured,content_element,footnote,media,media_schema,file,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.bibliography,source_relation,link_relation,publication_relation,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;isTeaserIsHighlightIsHistorical,--palette--;;parentLocationParentObjectGroupParentSingleObjectParentResource,--palette--;;iriUuid,same_as,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumber,editorial_note,authorship_relation,licence_relation,--palette--;;editorialStepsPublicationSteps,
+            --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,import_origin,import,',
         ],
     ],
 ];
