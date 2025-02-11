@@ -141,13 +141,11 @@ class AbstractObject extends AbstractHeritage
      *
      * @param string $name
      * @param ObjectResource $parentResource
-     * @param string $iri
-     * @param string $uuid
      * @return AbstractObject
      */
-    public function __construct(string $name, ObjectResource $parentResource, string $iri, string $uuid)
+    public function __construct(string $name, ObjectResource $parentResource)
     {
-        parent::__construct($parentResource, $iri, $uuid);
+        parent::__construct($parentResource);
         $this->initializeObject();
 
         $this->setName($name);
