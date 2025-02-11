@@ -57,12 +57,13 @@ class ObjectResource extends AbstractResource
      * Construct object
      *
      * @param string $langCode
+     * @param string $iri
      * @param string $uuid
      * @return ObjectResource
      */
-    public function __construct(string $langCode, string $uuid)
+    public function __construct(string $langCode, string $iri, string $uuid)
     {
-        parent::__construct($langCode, $uuid);
+        parent::__construct($langCode, $iri, $uuid);
         $this->initializeObject();
 
         $this->setType('objectResource');
