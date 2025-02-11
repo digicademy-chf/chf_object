@@ -212,8 +212,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectTree',
                 'foreign_table' => 'tx_chfbase_domain_model_tag',
-                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_tag}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_chfbase_domain_model_tag}.{#type}=\'labelTag\'',
+                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_tag}.{#type}=\'labelTag\'',
                 'MM' => 'tx_chfobject_domain_model_objectgroup_tag_label_mm',
                 'multiple' => 1,
                 'treeConfig' => [
@@ -514,7 +513,6 @@ return [
                     ],
                 ],
                 'foreign_table' => 'tx_chfbase_domain_model_location',
-                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_location}.{#pid}=###CURRENT_PID###',
                 'sortItems' => [
                     'label' => 'asc',
                 ],
@@ -529,8 +527,7 @@ return [
                 'type' => 'select',
                 'renderType' => 'selectSingleBox',
                 'foreign_table' => 'tx_chfbase_domain_model_resource',
-                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#pid}=###CURRENT_PID###'
-                    . ' AND {#tx_chfbase_domain_model_resource}.{#type}=\'objectResource\'',
+                'foreign_table_where' => 'AND {#tx_chfbase_domain_model_resource}.{#type}=\'objectResource\'',
                 'sortItems' => [
                     'label' => 'asc',
                 ],
