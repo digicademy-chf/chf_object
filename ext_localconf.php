@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 
 use Digicademy\CHFObject\Controller\ExhibitionController;
-use Digicademy\CHFObject\Controller\SpaceController;
+use Digicademy\CHFObject\Controller\SpacesController;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') or die();
@@ -18,18 +18,18 @@ ExtensionUtility::configurePlugin(
     'CHFObject',
     'Exhibition',
     [
-        ExhibitionController::class => 'index, showSingle, showGroup',
+        ExhibitionController::class => 'index, show, showGroup',
     ],
     [], // None of the actions are non-cacheable
     ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
 );
 
-// Register 'Space' content element
+// Register 'Spaces' content element
 ExtensionUtility::configurePlugin(
     'CHFObject',
-    'Space',
+    'Spaces',
     [
-        SpaceController::class => 'index, show',
+        SpacesController::class => 'index, show, showGroup',
     ],
     [], // None of the actions are non-cacheable
     ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT

@@ -11,6 +11,7 @@ namespace Digicademy\CHFObject\Controller;
 
 use Digicademy\CHFBase\Domain\Model\Location;
 use Digicademy\CHFBase\Domain\Repository\AbstractResourceRepository;
+use Digicademy\CHFObject\Domain\Model\ObjectGroup;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Core\Cache\CacheTag;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
@@ -18,9 +19,9 @@ use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 defined('TYPO3') or die();
 
 /**
- * Controller for Space
+ * Controller for Spaces
  */
-class SpaceController extends ActionController
+class SpacesController extends ActionController
 {
     private AbstractResourceRepository $abstractResourceRepository;
 
@@ -41,7 +42,8 @@ class SpaceController extends ActionController
         $this->view->assign('resource', $this->abstractResourceRepository->findByIdentifier($resourceIdentifier));
 
         // Set cache tag
-        $this->request->getAttribute('frontend.cache.collector')->addCacheTags(
+        $cacheDataCollector = $this->request->getAttribute('frontend.cache.collector');
+        $cacheDataCollector->addCacheTags(
             new CacheTag('chf')
         );
 
@@ -61,7 +63,29 @@ class SpaceController extends ActionController
         $this->view->assign('location', $location);
 
         // Set cache tag
-        $this->request->getAttribute('frontend.cache.collector')->addCacheTags(
+        $cacheDataCollector = $this->request->getAttribute('frontend.cache.collector');
+        $cacheDataCollector->addCacheTags(
+            new CacheTag('chf')
+        );
+
+        // Create response
+        return $this->htmlResponse();
+    }
+
+    /**
+     * Show single object group
+     *
+     * @param ObjectGroup $objectGroup
+     * @return ResponseInterface
+     */
+    public function showGroupAction(ObjectGroup $objectGroup): ResponseInterface
+    {
+        // Get object group
+        $this->view->assign('objectGroup', $objectGroup);
+
+        // Set cache tag
+        $cacheDataCollector = $this->request->getAttribute('frontend.cache.collector');
+        $cacheDataCollector->addCacheTags(
             new CacheTag('chf')
         );
 

@@ -8,36 +8,20 @@
                 <source>Object collection</source>
                 <target>Objektsammlung</target>
             </trans-unit>
-            <trans-unit id="object.objectResource.allObjectGroups" resname="object.objectResource.allObjectGroups" approved="yes">
-                <source>All object groups</source>
-                <target>Alle Objektgruppen</target>
-            </trans-unit>
-            <trans-unit id="object.objectResource.allObjectGroups.description" resname="object.objectResource.allObjectGroups.description" approved="yes">
-                <source>List of all object groups compiled in this resource</source>
-                <target>Liste aller Objektgruppen, die in dieser Ressource verzeichnet sind</target>
-            </trans-unit>
-            <trans-unit id="object.objectResource.allSingleObjects" resname="object.objectResource.allSingleObjects" approved="yes">
-                <source>All single objects</source>
-                <target>Alle Einzelobjekte</target>
-            </trans-unit>
-            <trans-unit id="object.objectResource.allSingleObjects.description" resname="object.objectResource.allSingleObjects.description" approved="yes">
-                <source>List of all single objects compiled in this resource</source>
-                <target>Liste aller Einzelobjekte, die in dieser Ressource verzeichnet sind</target>
-            </trans-unit>
             <!-- Object: AbstractObject -->
-            <trans-unit id="object.abstractObject.name" resname="object.abstractObject.name" approved="yes">
-                <source>Name</source>
-                <target>Name</target>
+            <trans-unit id="object.abstractObject.title" resname="object.abstractObject.title" approved="yes">
+                <source>Title</source>
+                <target>Titel</target>
             </trans-unit>
-            <trans-unit id="object.abstractObject.name.description" resname="object.abstractObject.name.description" approved="yes">
-                <source>Title of this record</source>
-                <target>Titel dieses Eintrags</target>
+            <trans-unit id="object.abstractObject.title.description" resname="object.abstractObject.title.description" approved="yes">
+                <source>Name of this record</source>
+                <target>Name dieses Eintrags</target>
             </trans-unit>
-            <trans-unit id="object.abstractObject.alternativeName" resname="object.abstractObject.alternativeName" approved="yes">
-                <source>Alternative Name</source>
-                <target>Alternativer Name</target>
+            <trans-unit id="object.abstractObject.alternativeTitle" resname="object.abstractObject.alternativeTitle" approved="yes">
+                <source>Alternative title</source>
+                <target>Alternativer Titel</target>
             </trans-unit>
-            <trans-unit id="object.abstractObject.alternativeName.description" resname="object.abstractObject.alternativeName.description" approved="yes">
+            <trans-unit id="object.abstractObject.alternativeTitle.description" resname="object.abstractObject.alternativeTitle.description" approved="yes">
                 <source>Common alternative name used, i.e., as a search term</source>
                 <target>Gebräuchlicher alternativer Name, z.B. als Suchbegriff</target>
             </trans-unit>
@@ -107,23 +91,6 @@
                 <source>Object group</source>
                 <target>Objektgruppe</target>
             </trans-unit>
-            <!-- Object: LabelTag -->
-            <trans-unit id="object.labelTag.asLabelOfSingleObject" resname="object.labelTag.asLabelOfSingleObject" approved="yes">
-                <source>Usage as label of a single object</source>
-                <target>Verwendung als Label eines Einzelobjekts</target>
-            </trans-unit>
-            <trans-unit id="object.labelTag.asLabelOfSingleObject.description" resname="object.labelTag.asLabelOfSingleObject.description" approved="yes">
-                <source>List of single objects that use this label</source>
-                <target>Liste der Einzelobjekte, die dieses Label verwenden</target>
-            </trans-unit>
-            <trans-unit id="object.labelTag.asLabelOfObjectGroup" resname="object.labelTag.asLabelOfObjectGroup" approved="yes">
-                <source>Usage as label of an object group</source>
-                <target>Verwendung als Label einer Objektgruppe</target>
-            </trans-unit>
-            <trans-unit id="object.labelTag.asLabelOfObjectGroup.description" resname="object.labelTag.asLabelOfObjectGroup.description" approved="yes">
-                <source>List of object groups that use this label</source>
-                <target>Liste der Objektgruppen, die dieses Label verwenden</target>
-            </trans-unit>
             <!-- Object: Extent -->
             <trans-unit id="object.extent.type.height" resname="object.extent.type.height" approved="yes">
                 <source>Height</source>
@@ -180,17 +147,17 @@
                 <target>Ausstellung</target>
             </trans-unit>
             <trans-unit id="plugin.exhibition.description" resname="plugin.exhibition.description" approved="yes">
-                <source>List and show single objects</source>
-                <target>Einzelobjekte auflisten und anzeigen</target>
+                <source>List and show single objects or groups</source>
+                <target>Einzelobjekte oder Objektgruppen auflisten und zeigen</target>
             </trans-unit>
-            <!-- Plugin: Space -->
+            <!-- Plugin: Spaces -->
             <trans-unit id="plugin.space" resname="plugin.space" approved="yes">
-                <source>Space</source>
-                <target>Raum</target>
+                <source>Spaces</source>
+                <target>Räume</target>
             </trans-unit>
             <trans-unit id="plugin.space.description" resname="plugin.space.description" approved="yes">
-                <source>List and show locations with objects</source>
-                <target>Orte mit Objekten auflisten und anzeigen</target>
+                <source>List and show locations with objects and groups</source>
+                <target>Orte mit Objekten und Objektgruppen auflisten und zeigen</target>
             </trans-unit>
         </body>
     </file>

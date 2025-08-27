@@ -42,7 +42,8 @@ class ExhibitionController extends ActionController
         $this->view->assign('resource', $this->abstractResourceRepository->findByIdentifier($resourceIdentifier));
 
         // Set cache tag
-        $this->request->getAttribute('frontend.cache.collector')->addCacheTags(
+        $cacheDataCollector = $this->request->getAttribute('frontend.cache.collector');
+        $cacheDataCollector->addCacheTags(
             new CacheTag('chf')
         );
 
@@ -56,13 +57,14 @@ class ExhibitionController extends ActionController
      * @param SingleObject $singleObject
      * @return ResponseInterface
      */
-    public function showSingleAction(SingleObject $singleObject): ResponseInterface
+    public function showAction(SingleObject $singleObject): ResponseInterface
     {
         // Get single object
         $this->view->assign('singleObject', $singleObject);
 
         // Set cache tag
-        $this->request->getAttribute('frontend.cache.collector')->addCacheTags(
+        $cacheDataCollector = $this->request->getAttribute('frontend.cache.collector');
+        $cacheDataCollector->addCacheTags(
             new CacheTag('chf')
         );
 
@@ -82,7 +84,8 @@ class ExhibitionController extends ActionController
         $this->view->assign('objectGroup', $objectGroup);
 
         // Set cache tag
-        $this->request->getAttribute('frontend.cache.collector')->addCacheTags(
+        $cacheDataCollector = $this->request->getAttribute('frontend.cache.collector');
+        $cacheDataCollector->addCacheTags(
             new CacheTag('chf')
         );
 

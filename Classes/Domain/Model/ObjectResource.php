@@ -9,50 +9,17 @@ declare(strict_types=1);
 
 namespace Digicademy\CHFObject\Domain\Model;
 
-use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
-use TYPO3\CMS\Extbase\Annotation\ORM\Cascade;
-use TYPO3\CMS\Extbase\Persistence\Generic\LazyLoadingProxy;
-use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 use Digicademy\CHFBase\Domain\Model\AbstractResource;
-use Digicademy\CHFGloss\Domain\Model\GlossaryResource;
+use Digicademy\CHFGloss\Domain\Model\Traits\GlossaryTrait;
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 defined('TYPO3') or die();
 
 /**
- * Model for ObjectResource
+ * Model for AbstractObjectResource
  */
-class ObjectResource extends AbstractResource
+class AbstractObjectResource extends AbstractResource
 {
-    /**
-     * Glossary of this resource
-     * 
-     * @var GlossaryResource|LazyLoadingProxy|null
-     */
-    #[Lazy()]
-    protected GlossaryResource|LazyLoadingProxy|null $glossary = null;
-
-    /**
-     * List of all single objects compiled in this resource
-     * 
-     * @var ?ObjectStorage<SingleObject>
-     */
-    #[Lazy()]
-    #[Cascade([
-        'value' => 'remove',
-    ])]
-    protected ?ObjectStorage $allSingleObjects = null;
-
-    /**
-     * List of all object groups compiled in this resource
-     * 
-     * @var ?ObjectStorage<ObjectGroup>
-     */
-    #[Lazy()]
-    #[Cascade([
-        'value' => 'remove',
-    ])]
-    protected ?ObjectStorage $allObjectGroups = null;
-
     /**
      * Construct object
      *
@@ -62,138 +29,28 @@ class ObjectResource extends AbstractResource
     public function __construct(string $langCode)
     {
         parent::__construct($langCode);
-        $this->initializeObject();
 
         $this->setType('objectResource');
     }
+}
+
+# If CHF Gloss is available
+if (ExtensionManagementUtility::isLoaded('chf_gloss')) {
 
     /**
-     * Initialize object
+     * Model for ObjectResource (with glossary property)
      */
-    public function initializeObject(): void
+    class ObjectResource extends AbstractObjectResource
     {
-        $this->allSingleObjects ??= new ObjectStorage();
-        $this->allObjectGroups ??= new ObjectStorage();
+        use GlossaryTrait;
     }
 
-    /**
-     * Get glossary
-     * 
-     * @return GlossaryResource
-     */
-    public function getGlossary(): GlossaryResource
-    {
-        if ($this->glossary instanceof LazyLoadingProxy) {
-            $this->glossary->_loadRealInstance();
-        }
-        return $this->glossary;
-    }
+# If no relevant extensions are available
+} else {
 
     /**
-     * Set glossary
-     * 
-     * @param GlossaryResource
+     * Model for ObjectResource
      */
-    public function setGlossary(GlossaryResource $glossary): void
-    {
-        $this->glossary = $glossary;
-    }
-
-    /**
-     * Get all single objects
-     *
-     * @return ObjectStorage<SingleObject>
-     */
-    public function getAllSingleObjects(): ?ObjectStorage
-    {
-        return $this->allSingleObjects;
-    }
-
-    /**
-     * Set all single objects
-     *
-     * @param ObjectStorage<SingleObject> $allSingleObjects
-     */
-    public function setAllSingleObjects(ObjectStorage $allSingleObjects): void
-    {
-        $this->allSingleObjects = $allSingleObjects;
-    }
-
-    /**
-     * Add all single objects
-     *
-     * @param SingleObject $allSingleObjects
-     */
-    public function addAllSingleObjects(SingleObject $allSingleObjects): void
-    {
-        $this->allSingleObjects?->attach($allSingleObjects);
-    }
-
-    /**
-     * Remove all single objects
-     *
-     * @param SingleObject $allSingleObjects
-     */
-    public function removeAllSingleObjects(SingleObject $allSingleObjects): void
-    {
-        $this->allSingleObjects?->detach($allSingleObjects);
-    }
-
-    /**
-     * Remove all all single objects
-     */
-    public function removeAllAllSingleObjects(): void
-    {
-        $allSingleObjects = clone $this->allSingleObjects;
-        $this->allSingleObjects->removeAll($allSingleObjects);
-    }
-
-    /**
-     * Get all object groups
-     *
-     * @return ObjectStorage<ObjectGroup>
-     */
-    public function getAllObjectGroups(): ?ObjectStorage
-    {
-        return $this->allObjectGroups;
-    }
-
-    /**
-     * Set all object groups
-     *
-     * @param ObjectStorage<ObjectGroup> $allObjectGroups
-     */
-    public function setAllObjectGroups(ObjectStorage $allObjectGroups): void
-    {
-        $this->allObjectGroups = $allObjectGroups;
-    }
-
-    /**
-     * Add all object groups
-     *
-     * @param ObjectGroup $allObjectGroups
-     */
-    public function addAllObjectGroups(ObjectGroup $allObjectGroups): void
-    {
-        $this->allObjectGroups?->attach($allObjectGroups);
-    }
-
-    /**
-     * Remove all object groups
-     *
-     * @param ObjectGroup $allObjectGroups
-     */
-    public function removeAllObjectGroups(ObjectGroup $allObjectGroups): void
-    {
-        $this->allObjectGroups?->detach($allObjectGroups);
-    }
-
-    /**
-     * Remove all all object groups
-     */
-    public function removeAllAllObjectGroups(): void
-    {
-        $allObjectGroups = clone $this->allObjectGroups;
-        $this->allObjectGroups->removeAll($allObjectGroups);
-    }
+    class ObjectResource extends AbstractObjectResource
+    {}
 }

@@ -30,8 +30,8 @@ return [
         'provider' => SvgIconProvider::class,
         'source' => 'EXT:chf_object/Resources/Public/Icons/PluginExhibition.svg',
     ],
-    'tx-chfobject-plugin-space' => [
+    'tx-chfobject-plugin-spaces' => [
         'provider' => SvgIconProvider::class,
-        'source' => 'EXT:chf_object/Resources/Public/Icons/PluginSpace.svg',
+        'source' => 'EXT:chf_object/Resources/Public/Icons/PluginSpaces.svg',
     ],
 ];

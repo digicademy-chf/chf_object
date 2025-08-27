@@ -26,61 +26,15 @@ defined('TYPO3') or die();
     ]
 );
 
-// Add columns 'all_single_objects' and 'all_object_groups'
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tx_chfbase_domain_model_resource',
-    [
-        'all_single_objects' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.objectResource.allSingleObjects',
-            'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.objectResource.allSingleObjects.description',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_chfobject_domain_model_singleobject',
-                'foreign_field' => 'parent_resource',
-                'foreign_sortby' => 'sorting',
-                'appearance' => [
-                    'collapseAll' => true,
-                    'expandSingle' => true,
-                    'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'bottom',
-                    'useSortable' => false,
-                    'showPossibleLocalizationRecords' => true,
-                    'showAllLocalizationLink' => true,
-                    'showSynchronizationLink' => true,
-                ],
-            ],
-        ],
-        'all_object_groups' => [
-            'exclude' => true,
-            'l10n_mode' => 'exclude',
-            'label' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.objectResource.allObjectGroups',
-            'description' => 'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:object.objectResource.allObjectGroups.description',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_chfobject_domain_model_objectgroup',
-                'foreign_field' => 'parent_resource',
-                'foreign_sortby' => 'sorting',
-                'appearance' => [
-                    'collapseAll' => true,
-                    'expandSingle' => true,
-                    'newRecordLinkAddTitle' => true,
-                    'levelLinksPosition' => 'bottom',
-                    'useSortable' => false,
-                    'showPossibleLocalizationRecords' => true,
-                    'showAllLocalizationLink' => true,
-                    'showSynchronizationLink' => true,
-                ],
-            ],
-        ],
-    ]
-);
-
 // Add type 'objectResource' and its 'showitem' list
 $GLOBALS['TCA']['tx_chfbase_domain_model_resource']['types'] += ['objectResource' => [
    'showitem' => 'type,--palette--;;titleLangCode,description,glossary,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,all_single_objects,all_object_groups,all_agents,all_locations,all_periods,all_tags,all_keywords,all_relations,all_file_groups,
-   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.placement,--palette--;;iriUuid,same_as,
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.structured,items,
+   --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.management,--palette--;;iriUuid,same_as,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.editorial,--palette--;;publicationDateRevisionDateRevisionNumber,editorial_note,authorship_relation,licence_relation,
    --div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:object.generic.import,import_origin,import_state,',
 ]];
+
+// Add opposite usage info to 'items' column
+$GLOBALS['TCA']['tx_chfbase_domain_model_resource']['columns']['items']['config']['MM_oppositeUsage']['tx_chfobject_domain_model_objectgroup'] = ['parent_resource'];
+$GLOBALS['TCA']['tx_chfbase_domain_model_resource']['columns']['items']['config']['MM_oppositeUsage']['tx_chfobject_domain_model_singleobject'] = ['parent_resource'];

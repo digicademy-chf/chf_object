@@ -7,29 +7,17 @@
             <trans-unit id="object.objectResource.type.objectResource" resname="object.objectResource.type.objectResource">
                 <source>Object collection</source>
             </trans-unit>
-            <trans-unit id="object.objectResource.allObjectGroups" resname="object.objectResource.allObjectGroups">
-                <source>All object groups</source>
-            </trans-unit>
-            <trans-unit id="object.objectResource.allObjectGroups.description" resname="object.objectResource.allObjectGroups.description">
-                <source>List of all object groups compiled in this resource</source>
-            </trans-unit>
-            <trans-unit id="object.objectResource.allSingleObjects" resname="object.objectResource.allSingleObjects">
-                <source>All single objects</source>
-            </trans-unit>
-            <trans-unit id="object.objectResource.allSingleObjects.description" resname="object.objectResource.allSingleObjects.description">
-                <source>List of all single objects compiled in this resource</source>
-            </trans-unit>
             <!-- Object: AbstractObject -->
-            <trans-unit id="object.abstractObject.name" resname="object.abstractObject.name">
-                <source>Name</source>
+            <trans-unit id="object.abstractObject.title" resname="object.abstractObject.title">
+                <source>Title</source>
             </trans-unit>
-            <trans-unit id="object.abstractObject.name.description" resname="object.abstractObject.name.description">
-                <source>Title of this record</source>
+            <trans-unit id="object.abstractObject.title.description" resname="object.abstractObject.title.description">
+                <source>Name of this record</source>
             </trans-unit>
-            <trans-unit id="object.abstractObject.alternativeName" resname="object.abstractObject.alternativeName">
-                <source>Alternative Name</source>
+            <trans-unit id="object.abstractObject.alternativeTitle" resname="object.abstractObject.alternativeTitle">
+                <source>Alternative title</source>
             </trans-unit>
-            <trans-unit id="object.abstractObject.alternativeName.description" resname="object.abstractObject.alternativeName.description">
+            <trans-unit id="object.abstractObject.alternativeTitle.description" resname="object.abstractObject.alternativeTitle.description">
                 <source>Common alternative name used, i.e., as a search term</source>
             </trans-unit>
             <trans-unit id="object.abstractObject.isHistorical" resname="object.abstractObject.isHistorical">
@@ -82,19 +70,6 @@
             <trans-unit id="object.objectGroup" resname="object.objectGroup">
                 <source>Object group</source>
             </trans-unit>
-            <!-- Object: LabelTag -->
-            <trans-unit id="object.labelTag.asLabelOfSingleObject" resname="object.labelTag.asLabelOfSingleObject">
-                <source>Usage as label of a single object</source>
-            </trans-unit>
-            <trans-unit id="object.labelTag.asLabelOfSingleObject.description" resname="object.labelTag.asLabelOfSingleObject.description">
-                <source>List of single objects that use this label</source>
-            </trans-unit>
-            <trans-unit id="object.labelTag.asLabelOfObjectGroup" resname="object.labelTag.asLabelOfObjectGroup">
-                <source>Usage as label of an object group</source>
-            </trans-unit>
-            <trans-unit id="object.labelTag.asLabelOfObjectGroup.description" resname="object.labelTag.asLabelOfObjectGroup.description">
-                <source>List of object groups that use this label</source>
-            </trans-unit>
             <!-- Object: Extent -->
             <trans-unit id="object.extent.type.height" resname="object.extent.type.height">
                 <source>Height</source>
@@ -138,14 +113,14 @@
                 <source>Exhibition</source>
             </trans-unit>
             <trans-unit id="plugin.exhibition.description" resname="plugin.exhibition.description">
-                <source>List and show single objects</source>
+                <source>List and show single objects or groups</source>
             </trans-unit>
-            <!-- Plugin: Space -->
+            <!-- Plugin: Spaces -->
             <trans-unit id="plugin.space" resname="plugin.space">
-                <source>Space</source>
+                <source>Spaces</source>
             </trans-unit>
             <trans-unit id="plugin.space.description" resname="plugin.space.description">
-                <source>List and show locations with objects</source>
+                <source>List and show locations with objects and groups</source>
             </trans-unit>
         </body>
     </file>
