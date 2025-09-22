@@ -151,11 +151,11 @@
                 <target>Einzelobjekte oder Objektgruppen auflisten und zeigen</target>
             </trans-unit>
             <!-- Plugin: Spaces -->
-            <trans-unit id="plugin.space" resname="plugin.space" approved="yes">
+            <trans-unit id="plugin.spaces" resname="plugin.spaces" approved="yes">
                 <source>Spaces</source>
                 <target>Räume</target>
             </trans-unit>
-            <trans-unit id="plugin.space.description" resname="plugin.space.description" approved="yes">
+            <trans-unit id="plugin.spaces.description" resname="plugin.spaces.description" approved="yes">
                 <source>List and show locations with objects and groups</source>
                 <target>Orte mit Objekten und Objektgruppen auflisten und zeigen</target>
             </trans-unit>

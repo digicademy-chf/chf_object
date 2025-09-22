@@ -116,10 +116,10 @@
                 <source>List and show single objects or groups</source>
             </trans-unit>
             <!-- Plugin: Spaces -->
-            <trans-unit id="plugin.space" resname="plugin.space">
+            <trans-unit id="plugin.spaces" resname="plugin.spaces">
                 <source>Spaces</source>
             </trans-unit>
-            <trans-unit id="plugin.space.description" resname="plugin.space.description">
+            <trans-unit id="plugin.spaces.description" resname="plugin.spaces.description">
                 <source>List and show locations with objects and groups</source>
             </trans-unit>
         </body>

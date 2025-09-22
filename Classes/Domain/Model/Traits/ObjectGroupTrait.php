@@ -24,20 +24,20 @@ trait ObjectGroupTrait
     /**
      * Room to list object groups as part of this location
      * 
-     * @var ?ObjectStorage<ObjectGroup>
+     * @var ObjectStorage<ObjectGroup>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ?ObjectStorage $objectGroup = null;
+    protected ObjectStorage $objectGroup;
 
     /**
      * Get object group
      *
      * @return ObjectStorage<ObjectGroup>
      */
-    public function getObjectGroup(): ?ObjectStorage
+    public function getObjectGroup(): ObjectStorage
     {
         return $this->objectGroup;
     }
@@ -59,7 +59,7 @@ trait ObjectGroupTrait
      */
     public function addObjectGroup(ObjectGroup $objectGroup): void
     {
-        $this->objectGroup?->attach($objectGroup);
+        $this->objectGroup->attach($objectGroup);
     }
 
     /**
@@ -69,7 +69,7 @@ trait ObjectGroupTrait
      */
     public function removeObjectGroup(ObjectGroup $objectGroup): void
     {
-        $this->objectGroup?->detach($objectGroup);
+        $this->objectGroup->detach($objectGroup);
     }
 
     /**

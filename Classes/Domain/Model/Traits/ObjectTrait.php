@@ -24,20 +24,20 @@ trait ObjectTrait
     /**
      * Room to list single objects as part of this location
      * 
-     * @var ?ObjectStorage<SingleObject>
+     * @var ObjectStorage<SingleObject>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ?ObjectStorage $object = null;
+    protected ObjectStorage $object;
 
     /**
      * Get object
      *
      * @return ObjectStorage<SingleObject>
      */
-    public function getObject(): ?ObjectStorage
+    public function getObject(): ObjectStorage
     {
         return $this->object;
     }
@@ -59,7 +59,7 @@ trait ObjectTrait
      */
     public function addObject(SingleObject $object): void
     {
-        $this->object?->attach($object);
+        $this->object->attach($object);
     }
 
     /**
@@ -69,7 +69,7 @@ trait ObjectTrait
      */
     public function removeObject(SingleObject $object): void
     {
-        $this->object?->detach($object);
+        $this->object->detach($object);
     }
 
     /**

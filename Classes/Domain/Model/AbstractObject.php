@@ -63,21 +63,21 @@ class AbstractAbstractObject extends AbstractHeritage
     /**
      * Room to list contained single objects
      * 
-     * @var ?ObjectStorage<SingleObject>
+     * @var ObjectStorage<SingleObject>
      */
     #[Lazy()]
-    protected ?ObjectStorage $object = null;
+    protected ObjectStorage $object;
 
     /**
      * Room to list object-related events
      * 
-     * @var ?ObjectStorage<Period>
+     * @var ObjectStorage<Period>
      */
     #[Lazy()]
     #[Cascade([
         'value' => 'remove',
     ])]
-    protected ?ObjectStorage $event = null;
+    protected ObjectStorage $event;
 
     /**
      * Place that this object (group) is part of
@@ -116,11 +116,11 @@ class AbstractAbstractObject extends AbstractHeritage
      */
     public function initializeObject(): void
     {
-        $this->extent ??= new ObjectStorage();
-        $this->object ??= new ObjectStorage();
-        $this->event ??= new ObjectStorage();
-        $this->agentRelation ??= new ObjectStorage();
-        $this->locationRelation ??= new ObjectStorage();
+        $this->extent = new ObjectStorage();
+        $this->object = new ObjectStorage();
+        $this->event = new ObjectStorage();
+        $this->agentRelation = new ObjectStorage();
+        $this->locationRelation = new ObjectStorage();
     }
 
     /**
@@ -168,7 +168,7 @@ class AbstractAbstractObject extends AbstractHeritage
      *
      * @return ObjectStorage<SingleObject>
      */
-    public function getObject(): ?ObjectStorage
+    public function getObject(): ObjectStorage
     {
         return $this->object;
     }
@@ -190,7 +190,7 @@ class AbstractAbstractObject extends AbstractHeritage
      */
     public function addObject(SingleObject $object): void
     {
-        $this->object?->attach($object);
+        $this->object->attach($object);
     }
 
     /**
@@ -200,7 +200,7 @@ class AbstractAbstractObject extends AbstractHeritage
      */
     public function removeObject(SingleObject $object): void
     {
-        $this->object?->detach($object);
+        $this->object->detach($object);
     }
 
     /**
@@ -217,7 +217,7 @@ class AbstractAbstractObject extends AbstractHeritage
      *
      * @return ObjectStorage<Period>
      */
-    public function getEvent(): ?ObjectStorage
+    public function getEvent(): ObjectStorage
     {
         return $this->event;
     }
@@ -239,7 +239,7 @@ class AbstractAbstractObject extends AbstractHeritage
      */
     public function addEvent(Period $event): void
     {
-        $this->event?->attach($event);
+        $this->event->attach($event);
     }
 
     /**
@@ -249,7 +249,7 @@ class AbstractAbstractObject extends AbstractHeritage
      */
     public function removeEvent(Period $event): void
     {
-        $this->event?->detach($event);
+        $this->event->detach($event);
     }
 
     /**
@@ -320,12 +320,12 @@ if (ExtensionManagementUtility::isLoaded('chf_map')) {
          */
         public function initializeObject(): void
         {
-            $this->extent ??= new ObjectStorage();
-            $this->coordinates ??= new ObjectStorage();
-            $this->object ??= new ObjectStorage();
-            $this->event ??= new ObjectStorage();
-            $this->agentRelation ??= new ObjectStorage();
-            $this->locationRelation ??= new ObjectStorage();
+            $this->extent = new ObjectStorage();
+            $this->coordinates = new ObjectStorage();
+            $this->object = new ObjectStorage();
+            $this->event = new ObjectStorage();
+            $this->agentRelation = new ObjectStorage();
+            $this->locationRelation = new ObjectStorage();
         }
     }
 
