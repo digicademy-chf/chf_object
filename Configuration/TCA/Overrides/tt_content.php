@@ -29,6 +29,7 @@ ExtensionUtility::registerPlugin(
     'tx-chfobject-plugin-exhibition',
     'heritage',
     'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.exhibition.description',
+    'FILE:EXT:chf_object/Configuration/FlexForms/PluginData.xml',
 );
 
 // Add plugin 'Spaces'
@@ -39,6 +40,7 @@ ExtensionUtility::registerPlugin(
     'tx-chfobject-plugin-spaces',
     'heritage',
     'LLL:EXT:chf_object/Resources/Private/Language/locallang.xlf:plugin.spaces.description',
+    'FILE:EXT:chf_object/Configuration/FlexForms/PluginData.xml',
 );
 
 // Add data tab to plugin form
@@ -47,18 +49,4 @@ ExtensionManagementUtility::addToAllTCAtypes(
     '--div--;LLL:EXT:chf_base/Resources/Private/Language/locallang.xlf:plugin.generic.data,pi_flexform',
     'chfobject_exhibition,chfobject_space',
     'after:subheader',
-);
-
-// Add form for plugin 'Exhibition'
-ExtensionManagementUtility::addPiFlexFormValue(
-    '*',
-    'FILE:EXT:chf_object/Configuration/FlexForms/PluginData.xml',
-    'chfobject_exhibition',
-);
-
-// Add form for plugin 'Spaces'
-ExtensionManagementUtility::addPiFlexFormValue(
-    '*',
-    'FILE:EXT:chf_object/Configuration/FlexForms/PluginData.xml',
-    'chfobject_spaces',
 );
