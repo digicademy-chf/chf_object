@@ -1,164 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" target-language="de" datatype="plaintext" original="EXT:chf_object/Resources/Private/Language/locallang.xlf" date="2023-09-25T10:48:43Z" product-name="chf_object">
-        <header/>
-        <body>
-            <!-- Object: ObjectResource -->
-            <trans-unit id="object.objectResource.type.objectResource" resname="object.objectResource.type.objectResource" approved="yes">
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en" trgLang="de">
+    <file id="chf_object">
+        <!-- Object: ObjectResource -->
+        <unit id="object.objectResource.type.objectResource">
+            <segment state="final">
                 <source>Object collection</source>
                 <target>Objektsammlung</target>
-            </trans-unit>
-            <!-- Object: AbstractObject -->
-            <trans-unit id="object.abstractObject.title" resname="object.abstractObject.title" approved="yes">
+            </segment>
+        </unit>
+        <!-- Object: AbstractObject -->
+        <unit id="object.abstractObject.title">
+            <segment state="final">
                 <source>Title</source>
                 <target>Titel</target>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.title.description" resname="object.abstractObject.title.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.title.description">
+            <segment state="final">
                 <source>Name of this record</source>
                 <target>Name dieses Eintrags</target>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.alternativeTitle" resname="object.abstractObject.alternativeTitle" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.alternativeTitle">
+            <segment state="final">
                 <source>Alternative title</source>
                 <target>Alternativer Titel</target>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.alternativeTitle.description" resname="object.abstractObject.alternativeTitle.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.alternativeTitle.description">
+            <segment state="final">
                 <source>Common alternative name used, i.e., as a search term</source>
                 <target>Gebräuchlicher alternativer Name, z.B. als Suchbegriff</target>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.isHistorical" resname="object.abstractObject.isHistorical" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.isHistorical">
+            <segment state="final">
                 <source>Historical record</source>
                 <target>Historischer Eintrag</target>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.isHistorical.description" resname="object.abstractObject.isHistorical.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.isHistorical.description">
+            <segment state="final">
                 <source>Marks object (group) as historical</source>
                 <target>Markiert Objekt(gruppe) als historisch</target>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.event" resname="object.abstractObject.event" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.event">
+            <segment state="final">
                 <source>Event</source>
                 <target>Ereignis</target>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.event.description" resname="object.abstractObject.event.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.event.description">
+            <segment state="final">
                 <source>Room to list object-related events</source>
                 <target>Raum für objektbezogene Ereignisse</target>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.object" resname="object.abstractObject.object" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.object">
+            <segment state="final">
                 <source>Single object</source>
                 <target>Einzelobjekt</target>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.object.description" resname="object.abstractObject.object.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.object.description">
+            <segment state="final">
                 <source>Room to list contained single objects</source>
                 <target>Raum für enthaltene Einzelobjekte</target>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.parentLocation" resname="object.abstractObject.parentLocation" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.parentLocation">
+            <segment state="final">
                 <source>Parent location</source>
                 <target>Übergeordneter Ort</target>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.parentLocation.description" resname="object.abstractObject.parentLocation.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.parentLocation.description">
+            <segment state="final">
                 <source>Place that this object (group) is part of</source>
                 <target>Ortsangabe, zu der dieses Objekt gehört</target>
-            </trans-unit>
-            <!-- Object: SingleObject -->
-            <trans-unit id="object.singleObject" resname="object.singleObject" approved="yes">
+            </segment>
+        </unit>
+        <!-- Object: SingleObject -->
+        <unit id="object.singleObject">
+            <segment state="final">
                 <source>Single object</source>
                 <target>Einzelobjekt</target>
-            </trans-unit>
-            <trans-unit id="object.singleObject.parentObjectGroup" resname="object.singleObject.parentObjectGroup" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.parentObjectGroup">
+            <segment state="final">
                 <source>Parent object group</source>
                 <target>Übergeordnete Objektgruppe</target>
-            </trans-unit>
-            <trans-unit id="object.singleObject.parentObjectGroup.description" resname="object.singleObject.parentObjectGroup.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.parentObjectGroup.description">
+            <segment state="final">
                 <source>Object group that this single object is part of</source>
                 <target>Objektgruppe, zu der dieses Einzelobjekt gehört</target>
-            </trans-unit>
-            <trans-unit id="object.singleObject.parentSingleObject" resname="object.singleObject.parentSingleObject" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.parentSingleObject">
+            <segment state="final">
                 <source>Parent single object</source>
                 <target>Übergeordnetes Einzelobjekt</target>
-            </trans-unit>
-            <trans-unit id="object.singleObject.parentSingleObject.description" resname="object.singleObject.parentSingleObject.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.parentSingleObject.description">
+            <segment state="final">
                 <source>Single object that this single object is part of</source>
                 <target>Einzelobjekt, zu dem dieses Einzelobjekt gehört</target>
-            </trans-unit>
-            <trans-unit id="object.singleObject.mediaSchema" resname="object.singleObject.mediaSchema" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.mediaSchema">
+            <segment state="final">
                 <source>Media schema</source>
                 <target>Medienschema</target>
-            </trans-unit>
-            <trans-unit id="object.singleObject.mediaSchema.description" resname="object.singleObject.mediaSchema.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.mediaSchema.description">
+            <segment state="final">
                 <source>Schematic related to the first media file</source>
                 <target>Schaubild, das zur ersten Mediendatei passt</target>
-            </trans-unit>
-            <!-- Object: ObjectGroup -->
-            <trans-unit id="object.objectGroup" resname="object.objectGroup" approved="yes">
+            </segment>
+        </unit>
+        <!-- Object: ObjectGroup -->
+        <unit id="object.objectGroup">
+            <segment state="final">
                 <source>Object group</source>
                 <target>Objektgruppe</target>
-            </trans-unit>
-            <!-- Object: Extent -->
-            <trans-unit id="object.extent.type.height" resname="object.extent.type.height" approved="yes">
+            </segment>
+        </unit>
+        <!-- Object: Extent -->
+        <unit id="object.extent.type.height">
+            <segment state="final">
                 <source>Height</source>
                 <target>Höhe</target>
-            </trans-unit>
-            <trans-unit id="object.extent.type.width" resname="object.extent.type.width" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.width">
+            <segment state="final">
                 <source>Width</source>
                 <target>Breit</target>
-            </trans-unit>
-            <trans-unit id="object.extent.type.diameter" resname="object.extent.type.diameter" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.diameter">
+            <segment state="final">
                 <source>Diameter</source>
                 <target>Durchmesser</target>
-            </trans-unit>
-            <trans-unit id="object.extent.type.inventoryNumber" resname="object.extent.type.inventoryNumber" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.inventoryNumber">
+            <segment state="final">
                 <source>Inventory number</source>
                 <target>Inventarnummer</target>
-            </trans-unit>
-            <trans-unit id="object.extent.type.positionOnPlan" resname="object.extent.type.positionOnPlan" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.positionOnPlan">
+            <segment state="final">
                 <source>Position on plan</source>
                 <target>Position im Grundriss</target>
-            </trans-unit>
-            <trans-unit id="object.extent.type.number" resname="object.extent.type.number" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.number">
+            <segment state="final">
                 <source>Window number</source>
                 <target>Fensternummer</target>
-            </trans-unit>
-            <trans-unit id="object.extent.type.panelRow" resname="object.extent.type.panelRow" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.panelRow">
+            <segment state="final">
                 <source>Panel row</source>
                 <target>Zeile der Scheibe</target>
-            </trans-unit>
-            <trans-unit id="object.extent.type.panelColumn" resname="object.extent.type.panelColumn" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.panelColumn">
+            <segment state="final">
                 <source>Panel column</source>
                 <target>Bahn der Scheibe</target>
-            </trans-unit>
-            <!-- Object: Location -->
-            <trans-unit id="object.location.object" resname="object.location.object" approved="yes">
+            </segment>
+        </unit>
+        <!-- Object: Location -->
+        <unit id="object.location.object">
+            <segment state="final">
                 <source>Single object</source>
                 <target>Einzelobjekt</target>
-            </trans-unit>
-            <trans-unit id="object.location.object.description" resname="object.location.object.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.location.object.description">
+            <segment state="final">
                 <source>Room to list single objects as part of this location</source>
                 <target>Raum für zu diesem Ort gehörige Einzelobjekte</target>
-            </trans-unit>
-            <trans-unit id="object.location.objectGroup" resname="object.location.objectGroup" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.location.objectGroup">
+            <segment state="final">
                 <source>Object group</source>
                 <target>Objektgruppe</target>
-            </trans-unit>
-            <trans-unit id="object.location.objectGroup.description" resname="object.location.objectGroup.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="object.location.objectGroup.description">
+            <segment state="final">
                 <source>Room to list object groups as part of this location</source>
                 <target>Raum für zu diesem Ort gehörige Objektgruppen</target>
-            </trans-unit>
-            <!-- Plugin: Exhibition -->
-            <trans-unit id="plugin.exhibition" resname="plugin.exhibition" approved="yes">
+            </segment>
+        </unit>
+        <!-- Plugin: Exhibition -->
+        <unit id="plugin.exhibition">
+            <segment state="final">
                 <source>Exhibition</source>
                 <target>Ausstellung</target>
-            </trans-unit>
-            <trans-unit id="plugin.exhibition.description" resname="plugin.exhibition.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="plugin.exhibition.description">
+            <segment state="final">
                 <source>List and show single objects or groups</source>
                 <target>Einzelobjekte oder Objektgruppen auflisten und zeigen</target>
-            </trans-unit>
-            <!-- Plugin: Spaces -->
-            <trans-unit id="plugin.spaces" resname="plugin.spaces" approved="yes">
+            </segment>
+        </unit>
+        <!-- Plugin: Spaces -->
+        <unit id="plugin.spaces">
+            <segment state="final">
                 <source>Spaces</source>
                 <target>Räume</target>
-            </trans-unit>
-            <trans-unit id="plugin.spaces.description" resname="plugin.spaces.description" approved="yes">
+            </segment>
+        </unit>
+        <unit id="plugin.spaces.description">
+            <segment state="final">
                 <source>List and show locations with objects and groups</source>
                 <target>Orte mit Objekten und Objektgruppen auflisten und zeigen</target>
-            </trans-unit>
-        </body>
+            </segment>
+        </unit>
     </file>
 </xliff>

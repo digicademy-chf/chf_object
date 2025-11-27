@@ -1,127 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-    <file source-language="en" datatype="plaintext" original="EXT:chf_object/Resources/Private/Language/locallang.xlf" date="2023-09-25T10:48:43Z" product-name="chf_object">
-        <header/>
-        <body>
-            <!-- Object: ObjectResource -->
-            <trans-unit id="object.objectResource.type.objectResource" resname="object.objectResource.type.objectResource">
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en">
+    <file id="chf_object">
+        <!-- Object: ObjectResource -->
+        <unit id="object.objectResource.type.objectResource">
+            <segment>
                 <source>Object collection</source>
-            </trans-unit>
-            <!-- Object: AbstractObject -->
-            <trans-unit id="object.abstractObject.title" resname="object.abstractObject.title">
+            </segment>
+        </unit>
+        <!-- Object: AbstractObject -->
+        <unit id="object.abstractObject.title">
+            <segment>
                 <source>Title</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.title.description" resname="object.abstractObject.title.description">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.title.description">
+            <segment>
                 <source>Name of this record</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.alternativeTitle" resname="object.abstractObject.alternativeTitle">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.alternativeTitle">
+            <segment>
                 <source>Alternative title</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.alternativeTitle.description" resname="object.abstractObject.alternativeTitle.description">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.alternativeTitle.description">
+            <segment>
                 <source>Common alternative name used, i.e., as a search term</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.isHistorical" resname="object.abstractObject.isHistorical">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.isHistorical">
+            <segment>
                 <source>Historical record</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.isHistorical.description" resname="object.abstractObject.isHistorical.description">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.isHistorical.description">
+            <segment>
                 <source>Marks object (group) as historical</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.event" resname="object.abstractObject.event">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.event">
+            <segment>
                 <source>Event</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.event.description" resname="object.abstractObject.event.description">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.event.description">
+            <segment>
                 <source>Room to list object-related events</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.object" resname="object.abstractObject.object">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.object">
+            <segment>
                 <source>Single object</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.object.description" resname="object.abstractObject.object.description">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.object.description">
+            <segment>
                 <source>Room to list contained single objects</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.parentLocation" resname="object.abstractObject.parentLocation">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.parentLocation">
+            <segment>
                 <source>Parent location</source>
-            </trans-unit>
-            <trans-unit id="object.abstractObject.parentLocation.description" resname="object.abstractObject.parentLocation.description">
+            </segment>
+        </unit>
+        <unit id="object.abstractObject.parentLocation.description">
+            <segment>
                 <source>Place that this object (group) is part of</source>
-            </trans-unit>
-            <!-- Object: SingleObject -->
-            <trans-unit id="object.singleObject" resname="object.singleObject">
+            </segment>
+        </unit>
+        <!-- Object: SingleObject -->
+        <unit id="object.singleObject">
+            <segment>
                 <source>Single object</source>
-            </trans-unit>
-            <trans-unit id="object.singleObject.parentObjectGroup" resname="object.singleObject.parentObjectGroup">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.parentObjectGroup">
+            <segment>
                 <source>Parent object group</source>
-            </trans-unit>
-            <trans-unit id="object.singleObject.parentObjectGroup.description" resname="object.singleObject.parentObjectGroup.description">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.parentObjectGroup.description">
+            <segment>
                 <source>Object group that this single object is part of</source>
-            </trans-unit>
-            <trans-unit id="object.singleObject.parentSingleObject" resname="object.singleObject.parentSingleObject">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.parentSingleObject">
+            <segment>
                 <source>Parent single object</source>
-            </trans-unit>
-            <trans-unit id="object.singleObject.parentSingleObject.description" resname="object.singleObject.parentSingleObject.description">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.parentSingleObject.description">
+            <segment>
                 <source>Single object that this single object is part of</source>
-            </trans-unit>
-            <trans-unit id="object.singleObject.mediaSchema" resname="object.singleObject.mediaSchema">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.mediaSchema">
+            <segment>
                 <source>Media schema</source>
-            </trans-unit>
-            <trans-unit id="object.singleObject.mediaSchema.description" resname="object.singleObject.mediaSchema.description">
+            </segment>
+        </unit>
+        <unit id="object.singleObject.mediaSchema.description">
+            <segment>
                 <source>Schematic related to the first media file</source>
-            </trans-unit>
-            <!-- Object: ObjectGroup -->
-            <trans-unit id="object.objectGroup" resname="object.objectGroup">
+            </segment>
+        </unit>
+        <!-- Object: ObjectGroup -->
+        <unit id="object.objectGroup">
+            <segment>
                 <source>Object group</source>
-            </trans-unit>
-            <!-- Object: Extent -->
-            <trans-unit id="object.extent.type.height" resname="object.extent.type.height">
+            </segment>
+        </unit>
+        <!-- Object: Extent -->
+        <unit id="object.extent.type.height">
+            <segment>
                 <source>Height</source>
-            </trans-unit>
-            <trans-unit id="object.extent.type.width" resname="object.extent.type.width">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.width">
+            <segment>
                 <source>Width</source>
-            </trans-unit>
-            <trans-unit id="object.extent.type.diameter" resname="object.extent.type.diameter">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.diameter">
+            <segment>
                 <source>Diameter</source>
-            </trans-unit>
-            <trans-unit id="object.extent.type.inventoryNumber" resname="object.extent.type.inventoryNumber">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.inventoryNumber">
+            <segment>
                 <source>Inventory number</source>
-            </trans-unit>
-            <trans-unit id="object.extent.type.positionOnPlan" resname="object.extent.type.positionOnPlan">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.positionOnPlan">
+            <segment>
                 <source>Position on plan</source>
-            </trans-unit>
-            <trans-unit id="object.extent.type.number" resname="object.extent.type.number">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.number">
+            <segment>
                 <source>Window number</source>
-            </trans-unit>
-            <trans-unit id="object.extent.type.panelRow" resname="object.extent.type.panelRow">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.panelRow">
+            <segment>
                 <source>Panel row</source>
-            </trans-unit>
-            <trans-unit id="object.extent.type.panelColumn" resname="object.extent.type.panelColumn">
+            </segment>
+        </unit>
+        <unit id="object.extent.type.panelColumn">
+            <segment>
                 <source>Panel column</source>
-            </trans-unit>
-            <!-- Object: Location -->
-            <trans-unit id="object.location.object" resname="object.location.object">
+            </segment>
+        </unit>
+        <!-- Object: Location -->
+        <unit id="object.location.object">
+            <segment>
                 <source>Single object</source>
-            </trans-unit>
-            <trans-unit id="object.location.object.description" resname="object.location.object.description">
+            </segment>
+        </unit>
+        <unit id="object.location.object.description">
+            <segment>
                 <source>Room to list single objects as part of this location</source>
-            </trans-unit>
-            <trans-unit id="object.location.objectGroup" resname="object.location.objectGroup">
+            </segment>
+        </unit>
+        <unit id="object.location.objectGroup">
+            <segment>
                 <source>Object group</source>
-            </trans-unit>
-            <trans-unit id="object.location.objectGroup.description" resname="object.location.objectGroup.description">
+            </segment>
+        </unit>
+        <unit id="object.location.objectGroup.description">
+            <segment>
                 <source>Room to list object groups as part of this location</source>
-            </trans-unit>
-            <!-- Plugin: Exhibition -->
-            <trans-unit id="plugin.exhibition" resname="plugin.exhibition">
+            </segment>
+        </unit>
+        <!-- Plugin: Exhibition -->
+        <unit id="plugin.exhibition">
+            <segment>
                 <source>Exhibition</source>
-            </trans-unit>
-            <trans-unit id="plugin.exhibition.description" resname="plugin.exhibition.description">
+            </segment>
+        </unit>
+        <unit id="plugin.exhibition.description">
+            <segment>
                 <source>List and show single objects or groups</source>
-            </trans-unit>
-            <!-- Plugin: Spaces -->
-            <trans-unit id="plugin.spaces" resname="plugin.spaces">
+            </segment>
+        </unit>
+        <!-- Plugin: Spaces -->
+        <unit id="plugin.spaces">
+            <segment>
                 <source>Spaces</source>
-            </trans-unit>
-            <trans-unit id="plugin.spaces.description" resname="plugin.spaces.description">
+            </segment>
+        </unit>
+        <unit id="plugin.spaces.description">
+            <segment>
                 <source>List and show locations with objects and groups</source>
-            </trans-unit>
-        </body>
+            </segment>
+        </unit>
     </file>
 </xliff>
