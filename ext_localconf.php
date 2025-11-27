@@ -21,6 +21,7 @@ ExtensionUtility::configurePlugin(
         ExhibitionController::class => 'index, show, showGroup',
     ],
     [], // None of the actions are non-cacheable
+    null,
 );
 
 // Register 'Spaces' content element
@@ -31,4 +32,5 @@ ExtensionUtility::configurePlugin(
         SpacesController::class => 'index, show, showGroup',
     ],
     [], // None of the actions are non-cacheable
+    null,
 );
